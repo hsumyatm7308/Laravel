@@ -1,0 +1,7 @@
+=>Blade
+
+filename.blade.php 
+
+php artisan make:controller employeesController 
+
+=>Passing Data 

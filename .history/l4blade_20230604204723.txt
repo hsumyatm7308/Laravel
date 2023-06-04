@@ -1,0 +1,9 @@
+=>Blade
+
+filename.blade.php 
+
+php artisan make:controller employeesController 
+
+=>Passing Data  from Route/Controller 
+(i) view(view,variable);
+(ii) 
