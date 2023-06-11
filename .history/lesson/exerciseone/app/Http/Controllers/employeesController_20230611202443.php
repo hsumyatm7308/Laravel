@@ -88,22 +88,8 @@ class employeesController extends Controller
             'phone'=>'09273838'
         ];
 
-        return view('employees/edit',compact("data"));
+        return view('employees/show',$data);
 
     }
-
-
-    public function update(){
-        $data['employeesdata'] = [
-          
-            'name'=>'Aung Ko Ko',
-            'email'=>'aungkoko@gmailcom',
-            'phone'=>'09273838'
-        ];
-
-        return view('employees/update',['employee'=>$data['employeesdata']]);
-
-    }
-
 
 }

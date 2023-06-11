@@ -104,4 +104,4 @@ Route::get('/employees/update', [employeesController::class, 'update'])->name('e
 
 
 Route::get('/dashboards', [dashboardController::class, 'index'])->name('dashboards.index');
-Route::get('/members', [membersController::class, 'index'])->name('members.index');
+Route::get('/members/memmber', [membersController::class, 'index'])->name('members.index');

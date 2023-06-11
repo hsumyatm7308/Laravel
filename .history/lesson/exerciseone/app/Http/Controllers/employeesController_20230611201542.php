@@ -79,31 +79,4 @@ class employeesController extends Controller
 
     }
 
-
-    public function edit(){
-        $data['employeesdata'] = [
-          
-            'name'=>'Aung Ko Ko',
-            'email'=>'aungkoko@gmailcom',
-            'phone'=>'09273838'
-        ];
-
-        return view('employees/edit',compact("data"));
-
-    }
-
-
-    public function update(){
-        $data['employeesdata'] = [
-          
-            'name'=>'Aung Ko Ko',
-            'email'=>'aungkoko@gmailcom',
-            'phone'=>'09273838'
-        ];
-
-        return view('employees/update',['employee'=>$data['employeesdata']]);
-
-    }
-
-
 }

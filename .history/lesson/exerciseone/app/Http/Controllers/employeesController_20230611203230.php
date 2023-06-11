@@ -101,7 +101,7 @@ class employeesController extends Controller
             'phone'=>'09273838'
         ];
 
-        return view('employees/update',['employee'=>$data['employeesdata']]);
+        return view('employees/update',compact("data"));
 
     }
 
