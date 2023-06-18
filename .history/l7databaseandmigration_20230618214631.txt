@@ -84,28 +84,7 @@ php artisan migrate:refresh
 
 
 =>Delte all datas (auto rollback and automigrate/selected  table count to local by DESC )
-php artisan migrate:refresh --step=3
-
-
-
-=>Add New Columns 
-php artisan make:migration add_city_to_workers_table --table=workers
-
-
-$stable->string('city); to add_city_to_workers_table 
-php artisan migrate 
-
-
-=>Sort Column 
-php artisan migrate:rollback --pretend 
-php artisan migrate:rollback 
-$table->string('city)->after('phonenumber'); to add_city_to_workers_table
-
-
-
-
-
-
+php artisan migrate:refresh --step=2
 
 
 Note 
@@ -155,6 +134,6 @@ reset  က တေဘယ်တွေ အကုန်လုံးးးးးး�
 
 
 
-migrate:refresh   =  နောက်ဆုံးကနေ ဖျက်သွားးးးးးတာ     rollback and auto migrate  / နောက်ဆုံးကနေ ဖျက်တာ 
+migrate:refresh   =  နောက်ဆုံးကနေ ဖျက်သွားးးးးးတာ     rollback and auto migrate  / နောက်ဆုံးကနေ လိုကယ်ထဲသို့  
 
 

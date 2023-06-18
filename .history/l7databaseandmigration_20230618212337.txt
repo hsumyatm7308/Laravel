@@ -75,36 +75,6 @@ php artisan migrate:status
 php artisan migrate:rollback 
 php artisan migrate:rollback --step=2 
 php artisan migrate:rollback --pretend 
-php artisan migrate:reset
-php artisan migrate:refresh    [rollback -> migrations]=  DELETE DATA and batch 1
-
-
-=>Delete all datas (auto rollback and auto migrate)
-php artisan migrate:refresh
-
-
-=>Delte all datas (auto rollback and automigrate/selected  table count to local by DESC )
-php artisan migrate:refresh --step=3
-
-
-
-=>Add New Columns 
-php artisan make:migration add_city_to_workers_table --table=workers
-
-
-$stable->string('city); to add_city_to_workers_table 
-php artisan migrate 
-
-
-=>Sort Column 
-php artisan migrate:rollback --pretend 
-php artisan migrate:rollback 
-$table->string('city)->after('phonenumber'); to add_city_to_workers_table
-
-
-
-
-
 
 
 
@@ -131,30 +101,11 @@ next time will be 5
 
 
 
-
-
-
-
 rollback by batch a lite swal htore (*** a yan DANGEROUS)
-step  = table ko swal htote (table အရေအတွက်နဲ့ သွားယူတာ)
+step  = table ko swal htote 
 
 
 data မရှိသေးတဲ့ အခါမှ သုံး rollback & step 
 
 
-
 --pretend  က ဒီဟာတွေတော့ ဒေတာမရှိဘူး ပြန်ခေါ် မှာ သေချာလား မေးတယ် 
-
-
-
-
-reset  က တေဘယ်တွေ အကုန်လုံးးးးးးးးးးးးးးးးးးးးး ကို ဖြတ်ချပလိုက်တာ 
-
-
-
-
-
-
-migrate:refresh   =  နောက်ဆုံးကနေ ဖျက်သွားးးးးးတာ     rollback and auto migrate  / နောက်ဆုံးကနေ ဖျက်တာ 
-
-

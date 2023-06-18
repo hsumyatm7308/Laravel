@@ -56,13 +56,3 @@ php artisan migrate:refresh --step=2
 php artisan make:migration add_city_to_workers_table --table=workers
 
 
-=>Add New Columns 
-php artisan make:migration add_city_to_workers_table --table=workers
-
-
-$stable->string('city); to add_city_to_workers_table 
-php artisan migrate 
-
-
-=>Sort Column 
-php artisan migrate:rollback --pretend 

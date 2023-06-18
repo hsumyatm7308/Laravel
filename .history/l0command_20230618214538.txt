@@ -26,8 +26,6 @@ php artisan route:list --method=post
 
 
 
-
-
 =>Migration 
 =>Table to update db server 
    php artisan migrate
@@ -50,19 +48,3 @@ php artisan migrate:reset
 
 =>Delte all datas (auto rollback and automigrate/selected  table count to local by DESC )
 php artisan migrate:refresh --step=2
-
-
-=>Add New Columns 
-php artisan make:migration add_city_to_workers_table --table=workers
-
-
-=>Add New Columns 
-php artisan make:migration add_city_to_workers_table --table=workers
-
-
-$stable->string('city); to add_city_to_workers_table 
-php artisan migrate 
-
-
-=>Sort Column 
-php artisan migrate:rollback --pretend 

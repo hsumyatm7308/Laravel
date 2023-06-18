@@ -1,0 +1,38 @@
+=>Command 
+
+php artisan 
+
+=>server run 
+php artisan server 
+
+=>Check route list 
+php artisan route:list //a to z ASC 
+php aritsan route:list -r //z to a DESC 
+
+
+=>Check route list by path 
+php artisan route:list --path=staff
+php artisan route:list --path=staff -r 
+php artisan route:list --path=student 
+
+=>Check route list by method 
+php artisan route:list --method=get 
+php artisan route:list --method=get -r 
+php artisan route:list --method=post 
+
+
+
+
+
+
+
+=>Migration 
+=>Table to update db server 
+   php artisan migrate
+
+=>Create New Table
+php artisan make:migration create_students_table 
+
+
+=>List all 
+php artisan migrate:status 

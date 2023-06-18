@@ -27,15 +27,12 @@ database > migration
 
 =>Create New Table 
 php artisan make:migration create_students_table 
-php artisan make:migration create_workers_table --create="worker"
 
 
    $table->string('name');
             $table->string('phonenumber');
 
 php artisan migrate
-
-
 
 
 =>Avaliable Column Types 
@@ -73,37 +70,6 @@ php artisan migrate:status
 
 =>Undo Migragte 
 php artisan migrate:rollback 
-php artisan migrate:rollback --step=2 
-php artisan migrate:rollback --pretend 
-php artisan migrate:reset
-php artisan migrate:refresh    [rollback -> migrations]=  DELETE DATA and batch 1
-
-
-=>Delete all datas (auto rollback and auto migrate)
-php artisan migrate:refresh
-
-
-=>Delte all datas (auto rollback and automigrate/selected  table count to local by DESC )
-php artisan migrate:refresh --step=3
-
-
-
-=>Add New Columns 
-php artisan make:migration add_city_to_workers_table --table=workers
-
-
-$stable->string('city); to add_city_to_workers_table 
-php artisan migrate 
-
-
-=>Sort Column 
-php artisan migrate:rollback --pretend 
-php artisan migrate:rollback 
-$table->string('city)->after('phonenumber'); to add_city_to_workers_table
-
-
-
-
 
 
 
@@ -127,34 +93,4 @@ php artisan migrate:rollback
  နောက်တစ်ကြိမ် လုပ်  တေဘယ် လေးခုက အောက်ပြန်ရောက်လာ 
 
 next time will be 5 
-
-
-
-
-
-
-
-
-rollback by batch a lite swal htore (*** a yan DANGEROUS)
-step  = table ko swal htote (table အရေအတွက်နဲ့ သွားယူတာ)
-
-
-data မရှိသေးတဲ့ အခါမှ သုံး rollback & step 
-
-
-
---pretend  က ဒီဟာတွေတော့ ဒေတာမရှိဘူး ပြန်ခေါ် မှာ သေချာလား မေးတယ် 
-
-
-
-
-reset  က တေဘယ်တွေ အကုန်လုံးးးးးးးးးးးးးးးးးးးးး ကို ဖြတ်ချပလိုက်တာ 
-
-
-
-
-
-
-migrate:refresh   =  နောက်ဆုံးကနေ ဖျက်သွားးးးးးတာ     rollback and auto migrate  / နောက်ဆုံးကနေ ဖျက်တာ 
-
 
