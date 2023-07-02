@@ -244,7 +244,17 @@ Schema::create('authors', function (Blueprint $table) {
         });
 
 
-          Schema::create('posts', function (Blueprint $table) {
+=>Foreign Key Contraints 
+
+Method 1 
+$table->unsignedBigInteger('user_id');
+$table->foreign('user_id')->refrences('id')->on('users');
+
+Method 2 
+$table->foreignId('user_id')->constrained('users');
+
+
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title')->unique();
             $table->text('description');
@@ -261,19 +271,6 @@ Schema::create('authors', function (Blueprint $table) {
         
             $table->timestamps();
         });
-
-
-=>Foreign Key Contraints 
-
-Method 1 
-$table->unsignedBigInteger('user_id');
-$table->foreign('user_id')->refrences('id')->on('users');
-
-Method 2 
-$table->foreignId('user_id')->constrained('users');
-
-
-      
 
 
 

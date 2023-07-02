@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
-        
+        Schema::defaultStringLength(191);
         // view()->composer(file(bal file ko share chin tar lal),function())
                                       
                                  // $parameter  data passing lote ya mar phyit loh 

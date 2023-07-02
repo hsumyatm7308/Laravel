@@ -112,43 +112,6 @@ Route::get('/members', [membersController::class, 'index'])->name('members.index
 // use Illuminate\Support\Facades\DB 
 Route::get('types/insert',function(){
     DB::insert("INSERT INTO types(name) value(?)",["book"]);
-    return "Successfully Insert";
+    return "Successfully Insert"
 });
 
-Route::get('types/insert',function(){
-    DB::insert("INSERT INTO types(name) value(?)",["pdf"]);
-    return "Successfully Insert";
-});
-
-
-Route::get('types/read',function(){
-   $result =  DB::select("SELECT * FROM types");
-    return $result;
-});
-
-
-// Route::get('types/read',function(){
-//     $result =  DB::select("SELECT * FROM types");
-     
-//     foreach($result as $type){
-//    echo $type->name. "<br>";
-//     }
-//  });
-
-
-//  Route::get('types/read',function(){
-//     $result =  DB::select("SELECT * FROM types");
-     
-//   var_dump($result);
-//  });
- 
-
-//  Route::get('types/read',function(){
-//     $result =  DB::select("SELECT * FROM types WHERE id=?",[3]);
-//      return $result;
-//  });
- 
-
-
-
-// 2DB 

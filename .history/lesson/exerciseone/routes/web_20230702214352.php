@@ -120,7 +120,6 @@ Route::get('types/insert',function(){
     return "Successfully Insert";
 });
 
-
 Route::get('types/read',function(){
    $result =  DB::select("SELECT * FROM types");
     return $result;
@@ -148,7 +147,3 @@ Route::get('types/read',function(){
 //      return $result;
 //  });
  
-
-
-
-// 2DB 

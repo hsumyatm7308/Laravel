@@ -150,5 +150,3 @@ Route::get('types/read',function(){
  
 
 
-
-// 2DB 

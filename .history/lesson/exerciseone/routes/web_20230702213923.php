@@ -115,40 +115,17 @@ Route::get('types/insert',function(){
     return "Successfully Insert";
 });
 
-Route::get('types/insert',function(){
-    DB::insert("INSERT INTO types(name) value(?)",["pdf"]);
-    return "Successfully Insert";
-});
-
-
 Route::get('types/read',function(){
    $result =  DB::select("SELECT * FROM types");
     return $result;
 });
 
 
-// Route::get('types/read',function(){
-//     $result =  DB::select("SELECT * FROM types");
+Route::get('types/read',function(){
+    $result =  DB::select("SELECT * FROM types");
      
-//     foreach($result as $type){
-//    echo $type->name. "<br>";
-//     }
-//  });
-
-
-//  Route::get('types/read',function(){
-//     $result =  DB::select("SELECT * FROM types");
-     
-//   var_dump($result);
-//  });
+    foreach($result as $type){
+   echo $type->name. "<br>";
+    }
+ });
  
-
-//  Route::get('types/read',function(){
-//     $result =  DB::select("SELECT * FROM types WHERE id=?",[3]);
-//      return $result;
-//  });
- 
-
-
-
-// 2DB 

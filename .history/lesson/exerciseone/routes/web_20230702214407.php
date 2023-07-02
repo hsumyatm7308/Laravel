@@ -148,7 +148,3 @@ Route::get('types/read',function(){
 //      return $result;
 //  });
  
-
-
-
-// 2DB 
