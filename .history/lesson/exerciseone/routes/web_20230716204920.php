@@ -171,13 +171,13 @@ Route::get('shopper/update', function () {
 });
 
 Route::get('shopper/delete', function () {
-    DB::delete("DELETE FROM shopper WHERE id=?", [1]);
+    DB::delete("DELETE FROM shopper WHERE id=?",[1]);
     return "Data Delete";
 
 });
 
 
-Route::get('shoppers/read', function () {
+Route::get('shoppers/read',function(){
 
     // $results = DB::select("SELECT * FROM shoppers");
     // $results = DB::select("SELECT * FROM shoppers WHERE id = ?",[6]);
@@ -189,41 +189,7 @@ Route::get('shoppers/read', function () {
     //  $results = DB::table('types')->get();
     //  $results = DB::table('shopper')->select('*')->get();
     //  $results = DB::table('shopper')->selectRaw('*')->get();
-    //  $results = DB::table('shopper')->select(DB::raw('*'))->get();
-    //  $results = DB::table('shopper')->selectRaw(DB::raw('*'))->get();
+     $results = DB::table('shopper')->selectRaw(DB::raw('*'))->get();
 
-    // $results = DB::table('shopper')->select('fullname')->where('id', 5)->get();
-    // $results = DB::table('shopper')->select('fullname', 'phonenumber', 'city')->where('id', 5)->get();
-    // $results = DB::table('shopper')->select('fullname', 'phonenumber', 'city')->where('id', "<>", 5)->get();
-
-
-    // $results = DB::table('shopper')->select(DB::raw('fullname,phonenumber,city'))->where('id', 5)->get();
-
-
-    //  $results = DB::table('shopper')->selectRaw('*')->get();
-    //  $results = DB::table('shopper')->selectRaw('phone')->get();
-    //  $results = DB::table('shopper')->selectRaw(DB::raw('*'))->get();
-    //  $results = DB::table('shopper')->selectRaw(DB::raw('phone,number'))->where('id',2)->get();
-
-    // *error   (select know only columns)
-    // $results = DB::table('shopper')->select('count(*) AS totalshopper,city')->where('id',"<>",3)->groupBy('city')->get();
-
-    //ok
-    // $results = DB::table('shopper')->select(DB::raw('count(*) AS totalshopper,city'))->where('id',"<>",3)->groupBy('city')->get();
-
-
-    // $results = DB::table('shopper')->selectRaw('count(*) AS totalshopper,city')->where('id',"<>",3)->groupBy('city')->get();
-
-    // $results = DB::table('shopper')->selectRaw(DB::raw('count(*) AS totalshopper,city'))->where('id',"<>",3)->groupBy('city')->get();
-
-
-    // $results = DB::table('types')->first();
-    $results = DB::table('types')->pluck('fullname'); //array
-    $results = DB::table('types')->pluck('fullname','id'); //object
-
-    return $results;
-
-    // 16PK 
+     return $results;
 });
-
-

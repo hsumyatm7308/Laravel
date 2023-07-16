@@ -218,12 +218,11 @@ Route::get('shoppers/read', function () {
 
 
     // $results = DB::table('types')->first();
-    $results = DB::table('types')->pluck('fullname'); //array
+    $results = DB::table('types')->pluck('fullname','id'); //object
+
     $results = DB::table('types')->pluck('fullname','id'); //object
 
     return $results;
-
-    // 16PK 
 });
 
 

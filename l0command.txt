@@ -66,3 +66,20 @@ php artisan migrate
 
 =>Sort Column 
 php artisan migrate:rollback --pretend 
+
+
+
+=>Rename columns renameColumn(from,to)
+php artisan make:migration rename_students_column --table=students 
+=>up 
+$table->renameColumn('phonenumber','phone');
+$table->renameColumn('city','address');
+
+
+
+=>CRUD 
+DB::select 
+DB::insert 
+DB::update 
+DB:delete 
+DB:table()->get();

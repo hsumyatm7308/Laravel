@@ -223,7 +223,7 @@ Route::get('shoppers/read', function () {
 
     return $results;
 
-    // 16PK 
+    
 });
 
 

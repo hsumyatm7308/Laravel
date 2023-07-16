@@ -110,26 +110,26 @@ Route::get('/members', [membersController::class, 'index'])->name('members.index
 
 //Data Insert from route 
 // use Illuminate\Support\Facades\DB 
-Route::get('types/insert', function () {
-    DB::insert("INSERT INTO types(name) value(?)", ["book"]);
+Route::get('types/insert',function(){
+    DB::insert("INSERT INTO types(name) value(?)",["book"]);
     return "Successfully Insert";
 });
 
-Route::get('types/insert', function () {
-    DB::insert("INSERT INTO types(name) value(?)", ["pdf"]);
+Route::get('types/insert',function(){
+    DB::insert("INSERT INTO types(name) value(?)",["pdf"]);
     return "Successfully Insert";
 });
 
 
-Route::get('types/read', function () {
-    $result = DB::select("SELECT * FROM types");
+Route::get('types/read',function(){
+   $result =  DB::select("SELECT * FROM types");
     return $result;
 });
 
 
 // Route::get('types/read',function(){
 //     $result =  DB::select("SELECT * FROM types");
-
+     
 //     foreach($result as $type){
 //    echo $type->name. "<br>";
 //     }
@@ -138,92 +138,35 @@ Route::get('types/read', function () {
 
 //  Route::get('types/read',function(){
 //     $result =  DB::select("SELECT * FROM types");
-
+     
 //   var_dump($result);
 //  });
-
+ 
 
 //  Route::get('types/read',function(){
 //     $result =  DB::select("SELECT * FROM types WHERE id=?",[3]);
 //      return $result;
 //  });
+ 
 
 
 
-
-Route::get('students/insert', function () {
-    DB::insert('INSERT INTO students(name, phonenumber, city, address) VALUES (?, ?, ?, ?)', ['aung aung', '11111', 'yangon', 'alone']);
+Route::get('students/insert',function(){
+    DB::insert('INSERT INTO students(name,phonenumber,city,address) value(?,?,?)',['aung aung','11111','yangon','alone']);
     return "Data Insert";
 });
 
-Route::get('students/update', function () {
-    DB::update("UPDATE types SET name='ebook' WHERE id=? ", ['4']);
-    DB::update("UPDATE types SET name='pdf' WHERE id=? ", ['4']);
+Route::get('students/update',function(){
+    DB::update("UPDATE types SET name='ebook' WHERE id=? ",['4']);
+    DB::update("UPDATE types SET name='pdf' WHERE id=? ",['4']);
     return "Data Updated";
 
 });
 
 
-Route::get('shopper/update', function () {
-    DB::update("UPDATE shopper SET fullname=?,phone=?,city=? WHERE id =?", ['kyaw kayw', '222222', 'bago']);
+Route::get('students/update',function(){
+    DB::update("UPDATE types SET name='ebook' WHERE id=? ",['4']);
+    DB::update("UPDATE types SET name='pdf' WHERE id=? ",['4']);
     return "Data Updated";
 
 });
-
-Route::get('shopper/delete', function () {
-    DB::delete("DELETE FROM shopper WHERE id=?", [1]);
-    return "Data Delete";
-
-});
-
-
-Route::get('shoppers/read', function () {
-
-    // $results = DB::select("SELECT * FROM shoppers");
-    // $results = DB::select("SELECT * FROM shoppers WHERE id = ?",[6]);
-
-
-    // =>selet(columns)
-    // =>selectRaw(expression)
-
-    //  $results = DB::table('types')->get();
-    //  $results = DB::table('shopper')->select('*')->get();
-    //  $results = DB::table('shopper')->selectRaw('*')->get();
-    //  $results = DB::table('shopper')->select(DB::raw('*'))->get();
-    //  $results = DB::table('shopper')->selectRaw(DB::raw('*'))->get();
-
-    // $results = DB::table('shopper')->select('fullname')->where('id', 5)->get();
-    // $results = DB::table('shopper')->select('fullname', 'phonenumber', 'city')->where('id', 5)->get();
-    // $results = DB::table('shopper')->select('fullname', 'phonenumber', 'city')->where('id', "<>", 5)->get();
-
-
-    // $results = DB::table('shopper')->select(DB::raw('fullname,phonenumber,city'))->where('id', 5)->get();
-
-
-    //  $results = DB::table('shopper')->selectRaw('*')->get();
-    //  $results = DB::table('shopper')->selectRaw('phone')->get();
-    //  $results = DB::table('shopper')->selectRaw(DB::raw('*'))->get();
-    //  $results = DB::table('shopper')->selectRaw(DB::raw('phone,number'))->where('id',2)->get();
-
-    // *error   (select know only columns)
-    // $results = DB::table('shopper')->select('count(*) AS totalshopper,city')->where('id',"<>",3)->groupBy('city')->get();
-
-    //ok
-    // $results = DB::table('shopper')->select(DB::raw('count(*) AS totalshopper,city'))->where('id',"<>",3)->groupBy('city')->get();
-
-
-    // $results = DB::table('shopper')->selectRaw('count(*) AS totalshopper,city')->where('id',"<>",3)->groupBy('city')->get();
-
-    // $results = DB::table('shopper')->selectRaw(DB::raw('count(*) AS totalshopper,city'))->where('id',"<>",3)->groupBy('city')->get();
-
-
-    // $results = DB::table('types')->first();
-    $results = DB::table('types')->pluck('fullname'); //array
-    $results = DB::table('types')->pluck('fullname','id'); //object
-
-    return $results;
-
-    // 16PK 
-});
-
-

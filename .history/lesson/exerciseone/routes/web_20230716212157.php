@@ -212,18 +212,11 @@ Route::get('shoppers/read', function () {
     // $results = DB::table('shopper')->select(DB::raw('count(*) AS totalshopper,city'))->where('id',"<>",3)->groupBy('city')->get();
 
 
-    // $results = DB::table('shopper')->selectRaw('count(*) AS totalshopper,city')->where('id',"<>",3)->groupBy('city')->get();
+    $results = DB::table('shopper')->selectRaw('count(*) AS totalshopper,city')->where('id',"<>",3)->groupBy('city')->get();
 
-    // $results = DB::table('shopper')->selectRaw(DB::raw('count(*) AS totalshopper,city'))->where('id',"<>",3)->groupBy('city')->get();
+    $results = DB::table('shopper')->selectRaw(DB::raw('count(*) AS totalshopper,city'))->where('id',"<>",3)->groupBy('city')->get();
 
-
-    // $results = DB::table('types')->first();
-    $results = DB::table('types')->pluck('fullname'); //array
-    $results = DB::table('types')->pluck('fullname','id'); //object
+    
 
     return $results;
-
-    // 16PK 
 });
-
-

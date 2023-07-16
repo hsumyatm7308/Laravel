@@ -222,8 +222,6 @@ Route::get('shoppers/read', function () {
     $results = DB::table('types')->pluck('fullname','id'); //object
 
     return $results;
-
-    // 16PK 
 });
 
 
