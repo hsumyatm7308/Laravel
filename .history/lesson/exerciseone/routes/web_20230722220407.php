@@ -272,50 +272,18 @@ Route::get('article/find',function(){
 
 
 
-Route::get('article/where',function(){
-    
+Route::get('article/find',function(){
+    // use App\Models\Article
+    // $articles = Article::find(5);
 
-    
-    // $articles = Article::where('user_id',2)->orderBy('id','desc')->get();     
-    // return $articles;
-
-    
-    // $articles = Article::where('user_id',2)->take(5)->orderBy('id','desc')->get();     
-    // return $articles;
-
-
-    
-    // $articles = Article::where('user_id',2)->limit(5)->orderBy('id','desc')->get();     
-    // return $articles;
-
-
-    
-    // $articles = Article::where('id',2)->first();  //Object    
-    // return $articles;
-
-
-    
-    // $articles = Article::where('id',2)->select('user_id','title','decription')->get();  //array     
-    // return $articles;
-
-    // $articles = Article::where('id',2)->select('user_id','title','decription')->first();     
-    // return $articles;
-
-
-    
-    // $articles = Article::where('id',2)->pluck('description'); //array      
-    // return $articles;
-
-
-
-     
-    $articles = Article::where('id',2)->pluck('description','id'); //array      
+    // =Not Found Exception 
+    $articles = Article::findOrFail(20); //404 NOT FOUND    
     return $articles;
 
+
+    
 
    
 });
 
 
-
-// 22EQ 

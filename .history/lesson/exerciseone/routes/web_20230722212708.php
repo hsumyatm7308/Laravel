@@ -3,13 +3,11 @@
 use App\Http\Controllers\employeesController;
 use App\Http\Controllers\membersController;
 use App\Http\Controllers\staffsController;
-use Doctrine\DBAL\Types\Types;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\studentsController;
 use App\Http\Controllers\dashboardController;
 use Illuminate\Support\Facades\DB;
 use App\Models\Article;
-use App\Models\Type;
 
 
 
@@ -238,11 +236,6 @@ Route::get('article/read',function(){
     $articles = Article::all();
     return $articles;
     // return "Hello";
-
-
-    foreach($articles as $article){
-        echo "$article->title  <br> $article->description";
-    } 
 });
 
 
@@ -250,72 +243,10 @@ Route::get('article/read',function(){
 Route::get('article/types',function(){
     // use App\Models\Article
     $types = Type::all();
+    return $articles;
     // return "Hello";
-   
 });
 
 
 
-Route::get('article/find',function(){
-    // use App\Models\Article
-    // $articles = Article::find(5);
 
-    // =Not Found Exception 
-    $articles = Article::findOrFail(20); //404 NOT FOUND    
-    return $articles;
-
-
-
-
-   
-});
-
-
-
-Route::get('article/where',function(){
-    
-
-    
-    // $articles = Article::where('user_id',2)->orderBy('id','desc')->get();     
-    // return $articles;
-
-    
-    // $articles = Article::where('user_id',2)->take(5)->orderBy('id','desc')->get();     
-    // return $articles;
-
-
-    
-    // $articles = Article::where('user_id',2)->limit(5)->orderBy('id','desc')->get();     
-    // return $articles;
-
-
-    
-    // $articles = Article::where('id',2)->first();  //Object    
-    // return $articles;
-
-
-    
-    // $articles = Article::where('id',2)->select('user_id','title','decription')->get();  //array     
-    // return $articles;
-
-    // $articles = Article::where('id',2)->select('user_id','title','decription')->first();     
-    // return $articles;
-
-
-    
-    // $articles = Article::where('id',2)->pluck('description'); //array      
-    // return $articles;
-
-
-
-     
-    $articles = Article::where('id',2)->pluck('description','id'); //array      
-    return $articles;
-
-
-   
-});
-
-
-
-// 22EQ 

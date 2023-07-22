@@ -295,27 +295,15 @@ Route::get('article/where',function(){
 
 
     
-    // $articles = Article::where('id',2)->select('user_id','title','decription')->get();  //array     
-    // return $articles;
-
+    $articles = Article::where('id',2)->select('user_id','title','decription')->first();     
+    return $articles;
     // $articles = Article::where('id',2)->select('user_id','title','decription')->first();     
     // return $articles;
 
 
-    
-    // $articles = Article::where('id',2)->pluck('description'); //array      
-    // return $articles;
-
-
-
-     
-    $articles = Article::where('id',2)->pluck('description','id'); //array      
-    return $articles;
 
 
    
 });
 
 
-
-// 22EQ 

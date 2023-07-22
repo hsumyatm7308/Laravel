@@ -303,19 +303,12 @@ Route::get('article/where',function(){
 
 
     
-    // $articles = Article::where('id',2)->pluck('description'); //array      
-    // return $articles;
-
-
-
-     
-    $articles = Article::where('id',2)->pluck('description','id'); //array      
+    $articles = Article::where('id',2)->pluck('description');     
     return $articles;
+
 
 
    
 });
 
 
-
-// 22EQ 
