@@ -19,6 +19,7 @@ class Article extends Model
     // Mass Assignment 
     // Method 1 
 
+
     // protected $fillable = [
     //     'title',
     //     'description',

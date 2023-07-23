@@ -433,13 +433,6 @@ Route::get('articles/create',function(){
 //   return "Retrive Data or Insert $article";
 
 
-$article = Article::firstOrCreate([
-    'title'=>'this is new article 15',
-    'description'=>'Loream Ipsum is simply dummy tet of the sdf;sa',
-    'user_id'=>3,
-    'rating'=>2 
-]);
-return "Retrive Data or Insert $article";
 
 
 });

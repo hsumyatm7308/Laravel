@@ -438,8 +438,7 @@ $article = Article::firstOrCreate([
     'description'=>'Loream Ipsum is simply dummy tet of the sdf;sa',
     'user_id'=>3,
     'rating'=>2 
-]);
-return "Retrive Data or Insert $article";
+])
 
 
 });

@@ -19,12 +19,13 @@ class Article extends Model
     // Mass Assignment 
     // Method 1 
 
-    // protected $fillable = [
-    //     'title',
-    //     'description',
-    //     'user_id',
-    //     'rating'
-    // ];
+
+    protected $fillable = [
+        'title',
+        'description',
+        'user_id',
+        'rating'
+    ];
 
     //Method 2 
     protected $guarded = [];

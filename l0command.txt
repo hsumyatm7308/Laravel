@@ -83,3 +83,19 @@ DB::insert
 DB::update 
 DB:delete 
 DB:table()->get();
+
+
+
+
+ // Mass Assignment 
+    // Method 1 
+
+    // protected $fillable = [
+    //     'title',
+    //     'description',
+    //     'user_id',
+    //     'rating'
+    // ];
+
+    //Method 2 
+    protected $guarded = [];

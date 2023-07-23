@@ -16,18 +16,7 @@ class Article extends Model
     const CREATED_AT = 'created_date';
     const UPDATED_AT = 'updated_date';
 
-    // Mass Assignment 
-    // Method 1 
-
-    // protected $fillable = [
-    //     'title',
-    //     'description',
-    //     'user_id',
-    //     'rating'
-    // ];
-
-    //Method 2 
-    protected $guarded = [];
+    
 }
 
 
