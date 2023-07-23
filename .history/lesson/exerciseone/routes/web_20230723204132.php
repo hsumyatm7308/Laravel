@@ -366,43 +366,20 @@ Route::get('articles/aggregates',function(){
     // );
 
 
-    // return collect($data)->count();  //4
-    // return collect($data)->min() //{"price":100}
+    // return collect($data)->count(); 
     // return collect($data)->max(function($num){
 
     //     return $num['price'];
 
     // });
 
-    //  $result =  collect($data)->max(function($num){
+     $result =  collect($data)->max(function($num){
 
-    //     return $num['price'];
+        return $num['price'];
 
-    // });
+    });
 
-    // return $result;
-
-
-
-
-    // return collect($data)->min(function($num){
-    //     return $num['price'];
-    // }); //250
-
-
-    // return collect($data)->average(function($num){
-    //     return $num['price'];
-    // });
-
-    // return collect($data)->avg(function($num){
-    //     return $num['price'];
-    // }); //250
-
-    // return collect($data)->sum(function($num){
-    //     return $num['price'];
-    // }); //1000
-
-    
+    return $result;
 
 
 });

@@ -335,7 +335,7 @@ Route::get('article/where',function(){
     // return $article;
 
 
-    $article = Article::where('user_id')->firstOr(function(){
+    $article = Article::findOr('50',function(){
         return "Hello sir there is no data";
     });
     return $article;
@@ -344,65 +344,4 @@ Route::get('article/where',function(){
 
 
 
-// =>Retreving Aggregates 
-
-Route::get('articles/aggregates',function(){
-    $data = [
-        ['price'=>100],
-        ['price'=>200],
-        ['price'=>300],
-        ['price'=>400],
-
-    ];
-
-
-    // var_dump($data);
-    // echo "<br>";
-    // var_dump(collect($data));
-
-    // dd(
-    //     $data,
-    //     collect($data)
-    // );
-
-
-    // return collect($data)->count();  //4
-    // return collect($data)->min() //{"price":100}
-    // return collect($data)->max(function($num){
-
-    //     return $num['price'];
-
-    // });
-
-    //  $result =  collect($data)->max(function($num){
-
-    //     return $num['price'];
-
-    // });
-
-    // return $result;
-
-
-
-
-    // return collect($data)->min(function($num){
-    //     return $num['price'];
-    // }); //250
-
-
-    // return collect($data)->average(function($num){
-    //     return $num['price'];
-    // });
-
-    // return collect($data)->avg(function($num){
-    //     return $num['price'];
-    // }); //250
-
-    // return collect($data)->sum(function($num){
-    //     return $num['price'];
-    // }); //1000
-
-    
-
-
-});
+// 22EQ 

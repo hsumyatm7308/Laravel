@@ -402,7 +402,5 @@ Route::get('articles/aggregates',function(){
     //     return $num['price'];
     // }); //1000
 
-    
-
 
 });
