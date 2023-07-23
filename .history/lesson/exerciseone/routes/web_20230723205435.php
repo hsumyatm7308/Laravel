@@ -415,10 +415,7 @@ Route::get('articles/aggregates',function(){
 // return $articles;
 
 
-$articles = Article::where('user_id',1)->sum('rating');
+$articles = Article::where('user_id',1)->min('rating');
 return $articles;
 
 });
-
-
-// -------------------------------------------

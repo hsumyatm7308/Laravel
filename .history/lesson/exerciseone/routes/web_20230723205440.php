@@ -419,6 +419,3 @@ $articles = Article::where('user_id',1)->sum('rating');
 return $articles;
 
 });
-
-
-// -------------------------------------------

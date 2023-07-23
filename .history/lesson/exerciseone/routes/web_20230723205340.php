@@ -405,20 +405,6 @@ Route::get('articles/aggregates',function(){
 // $articles = Article::where('user_id',1)->min('rating');
 // return $articles; //2 
 
-// $articles = Article::where('user_id',1)->min('rating');
-// return $articles;
 
-// $articles = Article::where('user_id',1)->average('rating');
-// return $articles;
-
-// $articles = Article::where('user_id',1)->avg('rating');
-// return $articles;
-
-
-$articles = Article::where('user_id',1)->sum('rating');
-return $articles;
 
 });
-
-
-// -------------------------------------------

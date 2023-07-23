@@ -402,23 +402,10 @@ Route::get('articles/aggregates',function(){
     //     return $num['price'];
     // }); //1000
 
-// $articles = Article::where('user_id',1)->min('rating');
-// return $articles; //2 
 
-// $articles = Article::where('user_id',1)->min('rating');
-// return $articles;
+    return collect($data)->min(function($num){
+        return $num['price'];
+    });
 
-// $articles = Article::where('user_id',1)->average('rating');
-// return $articles;
-
-// $articles = Article::where('user_id',1)->avg('rating');
-// return $articles;
-
-
-$articles = Article::where('user_id',1)->sum('rating');
-return $articles;
 
 });
-
-
-// -------------------------------------------
