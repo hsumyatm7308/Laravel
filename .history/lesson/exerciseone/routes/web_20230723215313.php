@@ -511,14 +511,11 @@ Route::get('articles/reject',function(){
     return $collections->filter(function($value){
     //   return $value; //{"0":100,"1":200,"2":300,"5":1,"6":"1","7":"aung aung","9":" ","11":true,"14":["red","green","blue"],"15":{"price":100}}
     // return empty($value); //{"3":0,"4":"0","8":"","10":null,"12":false,"13":[]}
-    // return is_numeric($value); //[100,200,300,0,"0",1,"1"]
-    // return is_string($value); //{"4":"0","6":"1","7":"aung aung","8":"","9":" "}
-    // return is_bool($value); //{"11":true,"12":false}
-    // return is_array($value); //{"13":[],"14":["red","green","blue"],"15":{"price":100}}
-    // return is_null($value);  //{"10":null}
+    // return is_numeric($value)
+    // return is_string($value);
+    // return is_bool($value);
+    return is_array($value);
 
 
     });
 });
-
-// 23FT 

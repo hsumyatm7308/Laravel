@@ -222,7 +222,7 @@ Route::get('shoppers/read', function () {
 
     // $results = DB::table('types')->first();
     $results = DB::table('types')->pluck('fullname'); //array
-    $results = DB::table('types')->pluck('fullname', 'id'); //object
+    $results = DB::table('types')->pluck('fullname','id'); //object
 
     return $results;
 
@@ -233,30 +233,30 @@ Route::get('shoppers/read', function () {
 
 // =>Database Eloquent ORM 
 // sro 
-Route::get('article/read', function () {
+Route::get('article/read',function(){
     // use App\Models\Article
     $articles = Article::all();
     return $articles;
     // return "Hello";
 
 
-    foreach ($articles as $article) {
+    foreach($articles as $article){
         echo "$article->title  <br> $article->description";
-    }
+    } 
 });
 
 
 
-Route::get('article/types', function () {
+Route::get('article/types',function(){
     // use App\Models\Article
     $types = Type::all();
     // return "Hello";
-
+   
 });
 
 
 
-Route::get('article/find', function () {
+Route::get('article/find',function(){
     // use App\Models\Article
     // $articles = Article::find(5);
 
@@ -267,38 +267,38 @@ Route::get('article/find', function () {
 
 
 
-
+   
 });
 
 
 
-Route::get('article/where', function () {
+Route::get('article/where',function(){
+    
 
-
-
+    
     // $articles = Article::where('user_id',2)->orderBy('id','desc')->get();     
     // return $articles;
 
-
-
+    
+    
     // $articles = Article::where('user_id',2)->orderByDesc('id')->get();     
     // return $articles;
-
+    
     // $articles = Article::where('user_id',2)->take(5)->orderBy('id','desc')->get();     
     // return $articles;
 
 
-
+    
     // $articles = Article::where('user_id',2)->limit(5)->orderBy('id','desc')->get();     
     // return $articles;
 
 
-
+    
     // $articles = Article::where('id',2)->first();  //Object    
     // return $articles;
 
 
-
+    
     // $articles = Article::where('id',2)->select('user_id','title','decription')->get();  //array     
     // return $articles;
 
@@ -306,28 +306,28 @@ Route::get('article/where', function () {
     // return $articles;
 
 
-
+    
     // $articles = Article::where('id',2)->pluck('description'); //array      
     // return $articles;
 
 
 
-
+     
     // $articles = Article::where('id',2)->pluck('description','id'); //array      
     // return $articles;
 
 
 
-
-
+    
+    
     // $articles = Article::firstWhere('user_id',2);     
     // return $articles;
 
-
+    
     // $articles = Article::where('id','>',50)->firstOrFail();     
     // return $articles; //404 NOT FOUND 
 
-
+    
 
     // $article = Article::findOr('50',function(){
     //     return "Hello sir there is no data";
@@ -335,23 +335,23 @@ Route::get('article/where', function () {
     // return $article;
 
 
-    $article = Article::where('user_id')->firstOr(function () {
+    $article = Article::where('user_id')->firstOr(function(){
         return "Hello sir there is no data";
     });
     return $article;
-
+   
 });
 
 
 
 // =>Retreving Aggregates 
 
-Route::get('articles/aggregates', function () {
+Route::get('articles/aggregates',function(){
     $data = [
-        ['price' => 100],
-        ['price' => 200],
-        ['price' => 300],
-        ['price' => 400],
+        ['price'=>100],
+        ['price'=>200],
+        ['price'=>300],
+        ['price'=>400],
 
     ];
 
@@ -402,21 +402,21 @@ Route::get('articles/aggregates', function () {
     //     return $num['price'];
     // }); //1000
 
-    // $articles = Article::where('user_id',1)->min('rating');
+// $articles = Article::where('user_id',1)->min('rating');
 // return $articles; //2 
 
-    // $articles = Article::where('user_id',1)->min('rating');
+// $articles = Article::where('user_id',1)->min('rating');
 // return $articles;
 
-    // $articles = Article::where('user_id',1)->average('rating');
+// $articles = Article::where('user_id',1)->average('rating');
 // return $articles;
 
-    // $articles = Article::where('user_id',1)->avg('rating');
+// $articles = Article::where('user_id',1)->avg('rating');
 // return $articles;
 
 
-    $articles = Article::where('user_id', 1)->sum('rating');
-    return $articles;
+$articles = Article::where('user_id',1)->sum('rating');
+return $articles;
 
 });
 
@@ -425,15 +425,15 @@ Route::get('articles/aggregates', function () {
 
 // =>Retrieving or Creating Data to Model 
 
-Route::get('articles/create', function () {
-    //   $article = Article::firstOrCreate([
+Route::get('articles/create',function(){
+//   $article = Article::firstOrCreate([
 //     'title'=>'this is new article 1'
 //   ]);
 
-    //   return "Retrive Data or Insert $article";
+//   return "Retrive Data or Insert $article";
 
 
-    // $article = Article::firstOrCreate([
+// $article = Article::firstOrCreate([
 //     'title'=>'this is new article 15',
 //     'description'=>'Loream Ipsum is simply dummy tet of the sdf;sa',
 //     'user_id'=>3,
@@ -443,82 +443,13 @@ Route::get('articles/create', function () {
 
 
 
-    $article = Article::firstOrCreate(
-        [
-            'title' => 'this is new article 15'
-
-        ],
-        [
-            'description' => 'Loream Ipsum is simply dummy tet of the sdf;sa',
-            'user_id' => 3,
-            'rating' => 2
-        ]
-
-    );
-    return "Retrive Data or Insert $article";
+$article = Article::firstOrCreate([
+    'title'=>'this is new article 15',
+    'description'=>'Loream Ipsum is simply dummy tet of the sdf;sa',
+    'user_id'=>3,
+    'rating'=>2 
+]);
+return "Retrive Data or Insert $article";
 
 
 });
-
-
-Route::get('article/filter',function(){
-    // $articles = Article::all()->filter(function($article){
-    //     return $article->id > 5;
-    // })   ;
-
-
-    // $articles = Article::get()->filter(function($article){
-    //     return $article->id > 5;
-    // })   ;
-
-
-    // $articles = Article::cursor()->filter(function($article){
-    //     return $article->id > 5;
-    // })   ;
-
-    $articles = Article::all()->filter(function($article){
-        return $article->id > 5;
-    })   ;
-
-
-    foreach($articles as $article){
-        echo "$article->id <br> $article->title <br> $article->description";
-    }
-
-
-});
-
-
-Route::get('articles/reject',function(){
-    $data = [
-        100,200,300,0,'0',1,'1','aung aung','',' ',null,
-        true, false, [], ['red','green','blue'],['price'=>100]
-    ];
-
-    // return $data;
-    // dd(
-    //     $data,
-    //     collect($data)
-    // );
-
-    $collections = collect($data);
-    // return $collections->reject(); //{"3":0,"4":"0","8":"","10":null,"12":false,"13":[]}
-
-    // return $collections->reject(function($value){
-    //       return empty($value); //{"0":100,"1":200,"2":300,"5":1,"6":"1","7":"aung aung","9":" ","11":true,"14":["red","green","blue"],"15":{"price":100}}
-    // });
-
-    return $collections->filter(function($value){
-    //   return $value; //{"0":100,"1":200,"2":300,"5":1,"6":"1","7":"aung aung","9":" ","11":true,"14":["red","green","blue"],"15":{"price":100}}
-    // return empty($value); //{"3":0,"4":"0","8":"","10":null,"12":false,"13":[]}
-    // return is_numeric($value); //[100,200,300,0,"0",1,"1"]
-    // return is_string($value); //{"4":"0","6":"1","7":"aung aung","8":"","9":" "}
-    // return is_bool($value); //{"11":true,"12":false}
-    // return is_array($value); //{"13":[],"14":["red","green","blue"],"15":{"price":100}}
-    // return is_null($value);  //{"10":null}
-
-
-    });
-});
-
-// 23FT 

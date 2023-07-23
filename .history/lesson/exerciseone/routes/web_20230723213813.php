@@ -491,34 +491,6 @@ Route::get('article/filter',function(){
 
 Route::get('articles/reject',function(){
     $data = [
-        100,200,300,0,'0',1,'1','aung aung','',' ',null,
-        true, false, [], ['red','green','blue'],['price'=>100]
-    ];
-
-    // return $data;
-    // dd(
-    //     $data,
-    //     collect($data)
-    // );
-
-    $collections = collect($data);
-    // return $collections->reject(); //{"3":0,"4":"0","8":"","10":null,"12":false,"13":[]}
-
-    // return $collections->reject(function($value){
-    //       return empty($value); //{"0":100,"1":200,"2":300,"5":1,"6":"1","7":"aung aung","9":" ","11":true,"14":["red","green","blue"],"15":{"price":100}}
-    // });
-
-    return $collections->filter(function($value){
-    //   return $value; //{"0":100,"1":200,"2":300,"5":1,"6":"1","7":"aung aung","9":" ","11":true,"14":["red","green","blue"],"15":{"price":100}}
-    // return empty($value); //{"3":0,"4":"0","8":"","10":null,"12":false,"13":[]}
-    // return is_numeric($value); //[100,200,300,0,"0",1,"1"]
-    // return is_string($value); //{"4":"0","6":"1","7":"aung aung","8":"","9":" "}
-    // return is_bool($value); //{"11":true,"12":false}
-    // return is_array($value); //{"13":[],"14":["red","green","blue"],"15":{"price":100}}
-    // return is_null($value);  //{"10":null}
-
-
-    });
+        100,200,300,0,'0',1,'1'
+    ]
 });
-
-// 23FT 
