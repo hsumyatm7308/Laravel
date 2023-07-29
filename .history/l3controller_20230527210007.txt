@@ -1,3 +1,0 @@
-=>Controller 
-
-php artisan make::controller  controllernames 

@@ -10,7 +10,6 @@ use App\Http\Controllers\dashboardController;
 use Illuminate\Support\Facades\DB;
 use App\Models\Article;
 use App\Models\Type;
-use Carbon\Carbon;
 
 
 
@@ -509,7 +508,7 @@ Route::get('articles/reject',function(){
     //       return empty($value); //{"0":100,"1":200,"2":300,"5":1,"6":"1","7":"aung aung","9":" ","11":true,"14":["red","green","blue"],"15":{"price":100}}
     // });
 
-    // return $collections->filter(function($value){
+    return $collections->filter(function($value){
     //   return $value; //{"0":100,"1":200,"2":300,"5":1,"6":"1","7":"aung aung","9":" ","11":true,"14":["red","green","blue"],"15":{"price":100}}
     // return empty($value); //{"3":0,"4":"0","8":"","10":null,"12":false,"13":[]}
     // return is_numeric($value); //[100,200,300,0,"0",1,"1"]
@@ -519,93 +518,6 @@ Route::get('articles/reject',function(){
     // return is_null($value);  //{"10":null}
 
 
-    // });
-
-
-});
-
-
-// =>WhereColumn('column1','column2') //compare and rewult same value
-// =>WhereColumn('column1','co(>,<,=,etc...)','column2') //compare and rewult same value
-// =>WhereColumn([['column1','column2],['column3','column4']]) //multi compare 
-
-Route::get('articles/wherecolumn ',function(){
-    // $articles = Article::whereColumn('id','user_id')->get();
-    // return $articles;
-
-    // $articles= Article::whereColumn('created_date','updated_date')->get();
-    // return $articles;
-
-
-
-    // $articles= Article::whereColumn('created_date','>','updated_date')->orderByDESC('id')->get();
-    // return $articles;
-
-    $articles= Article::whereColumn([['id','user_id'],['created_date','updated_date']])->orderByDESC('id')->get();
-    return $articles;
-});
-
-
-Route::get('articles/insert',function(){
-    // Method 1 
-    // invoke Modle 
-
-    // $article = new Article;
-    // $article->title = "this is new article 18";
-    // $article->description = "Lorem Ipsum is lijlsjdf;s";
-    // $article->user_id = 1;
-    // $article->rating = 3 ;
-    // $article->save();
-
-    // return "Data Inserted $article";
-
-    // Method 2 
-
-    // direct call modle // create()  => not pull and just add 
-    // $article = Article::create([
-    //     'title'=>'this is new article 22',
-    //     'description'=>'loream Ipakfj;sdkf',
-    //     'user_id'=>2,
-    //     'ratiing'=>5
-
-    // ]);
-
-    // return "Data Inserted $article";
-
-    // echo now();
-    // var_dump(now()) // objcect  => Classic php ka yuu htar tar
-
-    // to string 
-    // now()->toDateString(); => laravel ka thonde htar tar 
-
-
-
-
-    date_default_timezone_set('Asia/Bangkok');
-    $getdate = now("Asia/Yangon")->toDateTimeString();
-    $today = date("Y-m-d H:i:s");
-
-
-    // use Carbon\Carbon
-    $curdatetime = Carbon::now();
-    var_dump($curdatetime); //object  from laravel 
-
-
-
-    $article = DB::table('article')->insert([
-        'title'=>'this is new article 22',
-        'description'=>'loream Ipakfj;sdkf',
-        'user_id'=>2,
-        'ratiing'=>5,
-        'created_date'=>$getdate,
-        // 'updated_date'=>$todauy
-        'updated_date'=>$curdatetime
-
-
-    ]);
-
-    return "Data Inserted $article";
-
-
+    });
 });
 

@@ -10,7 +10,6 @@ use App\Http\Controllers\dashboardController;
 use Illuminate\Support\Facades\DB;
 use App\Models\Article;
 use App\Models\Type;
-use Carbon\Carbon;
 
 
 
@@ -572,35 +571,12 @@ Route::get('articles/insert',function(){
 
     // return "Data Inserted $article";
 
-    // echo now();
-    // var_dump(now()) // objcect  => Classic php ka yuu htar tar
 
-    // to string 
-    // now()->toDateString(); => laravel ka thonde htar tar 
-
-
-
-
-    date_default_timezone_set('Asia/Bangkok');
-    $getdate = now("Asia/Yangon")->toDateTimeString();
-    $today = date("Y-m-d H:i:s");
-
-
-    // use Carbon\Carbon
-    $curdatetime = Carbon::now();
-    var_dump($curdatetime); //object  from laravel 
-
-
-
-    $article = DB::table('article')->insert([
+    $article = Article::create([
         'title'=>'this is new article 22',
         'description'=>'loream Ipakfj;sdkf',
         'user_id'=>2,
-        'ratiing'=>5,
-        'created_date'=>$getdate,
-        // 'updated_date'=>$todauy
-        'updated_date'=>$curdatetime
-
+        'ratiing'=>5
 
     ]);
 
@@ -608,4 +584,3 @@ Route::get('articles/insert',function(){
 
 
 });
-

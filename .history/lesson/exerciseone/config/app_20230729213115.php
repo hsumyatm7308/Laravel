@@ -71,8 +71,7 @@ return [
     */
 
     // 'timezone' => 'Asia/Yangon',
-    // 'timezine' => env('APP_TIMEZONE','UTC'),
-    'timezine' => env('APP_ABC','UTC'),
+    'timezine' => env('APP_TIMEZONE','UTC');
 
     /*
     |--------------------------------------------------------------------------

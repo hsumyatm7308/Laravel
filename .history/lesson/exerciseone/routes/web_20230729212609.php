@@ -608,4 +608,3 @@ Route::get('articles/insert',function(){
 
 
 });
-

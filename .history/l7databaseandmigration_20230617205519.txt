@@ -1,5 +1,0 @@
-=>Migration 
-
-.env 
-
-database > migration 

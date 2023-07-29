@@ -581,7 +581,6 @@ Route::get('articles/insert',function(){
 
 
 
-    date_default_timezone_set('Asia/Bangkok');
     $getdate = now("Asia/Yangon")->toDateTimeString();
     $today = date("Y-m-d H:i:s");
 
@@ -608,4 +607,3 @@ Route::get('articles/insert',function(){
 
 
 });
-

@@ -99,3 +99,17 @@ DB:table()->get();
 
     //Method 2 
     protected $guarded = [];
+
+
+
+-------------------------------------------
+
+    =>Change Laravel Timezone 
+
+    app > 'timezone' =>'Asia/Yangon',
+
+    Note:: php artisan config:clear 
+
+
+
+    29TZ 
