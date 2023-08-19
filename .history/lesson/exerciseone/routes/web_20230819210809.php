@@ -650,7 +650,7 @@ Route::get('articles/update', function () {
 });
 
 
-Route::get('articles/delete', function () {
+Route::get('articles/delete',function(){
     // $article = Article::find(1);
 
     // $article = Article::findOrFail(2);
@@ -670,10 +670,10 @@ Route::get('articles/delete', function () {
     // $article = Article::destroy(12); 
     // $article = Article::destroy(10,11); 
     // $article = Article::destroy([10,11]); 
-    // $article = Article::destroy(collect([3,4,6])); 
+    $article = Article::destroy(collect([3,4,6])); 
 
-    // return "Data delete successfully = $article" ;
-
+    return "Data delete successfully = $article" ;
+     
 
 
 
@@ -686,17 +686,4 @@ Route::get('articles/delete', function () {
 
 
 
-
-    // $article = Article::findOrFail(2);
-    // $article->delete();
-    $article = Article::destroy(collect([3, 4, 6]));
-
-    return "Data delete successfully = $article";
-
-
-
-
 });
-
-
-// 19SD 

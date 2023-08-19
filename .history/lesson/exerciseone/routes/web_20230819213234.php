@@ -697,6 +697,3 @@ Route::get('articles/delete', function () {
 
 
 });
-
-
-// 19SD 

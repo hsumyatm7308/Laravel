@@ -462,7 +462,7 @@ Route::get('articles/create', function () {
 });
 
 
-Route::get('article/filter', function () {
+Route::get('article/filter',function(){
     // $articles = Article::all()->filter(function($article){
     //     return $article->id > 5;
     // })   ;
@@ -477,12 +477,12 @@ Route::get('article/filter', function () {
     //     return $article->id > 5;
     // })   ;
 
-    $articles = Article::all()->filter(function ($article) {
+    $articles = Article::all()->filter(function($article){
         return $article->id > 5;
-    });
+    })   ;
 
 
-    foreach ($articles as $article) {
+    foreach($articles as $article){
         echo "$article->id <br> $article->title <br> $article->description";
     }
 
@@ -490,24 +490,10 @@ Route::get('article/filter', function () {
 });
 
 
-Route::get('articles/reject', function () {
+Route::get('articles/reject',function(){
     $data = [
-        100,
-        200,
-        300,
-        0,
-        '0',
-        1,
-        '1',
-        'aung aung',
-        '',
-        ' ',
-        null,
-        true,
-        false,
-        [],
-        ['red', 'green', 'blue'],
-        ['price' => 100]
+        100,200,300,0,'0',1,'1','aung aung','',' ',null,
+        true, false, [], ['red','green','blue'],['price'=>100]
     ];
 
     // return $data;
@@ -543,7 +529,7 @@ Route::get('articles/reject', function () {
 // =>WhereColumn('column1','co(>,<,=,etc...)','column2') //compare and rewult same value
 // =>WhereColumn([['column1','column2],['column3','column4']]) //multi compare 
 
-Route::get('articles/wherecolumn ', function () {
+Route::get('articles/wherecolumn ',function(){
     // $articles = Article::whereColumn('id','user_id')->get();
     // return $articles;
 
@@ -555,12 +541,12 @@ Route::get('articles/wherecolumn ', function () {
     // $articles= Article::whereColumn('created_date','>','updated_date')->orderByDESC('id')->get();
     // return $articles;
 
-    $articles = Article::whereColumn([['id', 'user_id'], ['created_date', 'updated_date']])->orderByDESC('id')->get();
+    $articles= Article::whereColumn([['id','user_id'],['created_date','updated_date']])->orderByDESC('id')->get();
     return $articles;
 });
 
 
-Route::get('articles/insert', function () {
+Route::get('articles/insert',function(){
     // Method 1 
     // invoke Modle 
 
@@ -607,13 +593,13 @@ Route::get('articles/insert', function () {
 
 
     $article = DB::table('article')->insert([
-        'title' => 'this is new article 22',
-        'description' => 'loream Ipakfj;sdkf',
-        'user_id' => 2,
-        'ratiing' => 5,
-        'created_date' => $getdate,
+        'title'=>'this is new article 22',
+        'description'=>'loream Ipakfj;sdkf',
+        'user_id'=>2,
+        'ratiing'=>5,
+        'created_date'=>$getdate,
         // 'updated_date'=>$todauy
-        'updated_date' => $curdatetime
+        'updated_date'=>$curdatetime
 
 
     ]);
@@ -623,7 +609,7 @@ Route::get('articles/insert', function () {
 
 });
 
-Route::get('articles/update', function () {
+Route::get('articles/update',function(){
 
     // $article = Article::findOrFail(10);
     // $article = "This is new article 012";
@@ -632,71 +618,7 @@ Route::get('articles/update', function () {
 
     // return "Data Updated $article";
 
-    // =>Mass Updates 
-    // $article = Article::whre('rating', 1)->update(['rating' => 2]);
-    //                            //user id 2 & rating 5 shi tae kaung tway ko rating 3 phiyt pay ya mal
-    // $article = Article::where('user_id', 2)->where('rating', 5)->update(['rating' => 3]);
-    // return "Data Updated $article";
-
-    $article = Article::updateOrCreate(
-        ['title' => 'this is new articel 12', 'description' => 'Loremljfd;asf;akl'],
-        ['user_id' => 1, 'rating' => 5]
-    );
-
-    return "Data Updated $article";
-
-
+    $article = Article::where('user_id',2)->where('rating',5)->update(['rating'=>3]);
 
 });
 
-
-Route::get('articles/delete', function () {
-    // $article = Article::find(1);
-
-    // $article = Article::findOrFail(2);
-    // $article->delete();
-    // return "Data delete successfully = $article" ;
-
-    // $article = Article::where('rating',3);
-    // $article->delete();
-    // return "Data delete successfully = $article" ;
-
-    // $article = Article::where('rating',3)->delete();
-    // return "Data delete successfully = $article" ;
-
-
-    // => Bulk Delete (Note :: must be primary key)
-
-    // $article = Article::destroy(12); 
-    // $article = Article::destroy(10,11); 
-    // $article = Article::destroy([10,11]); 
-    // $article = Article::destroy(collect([3,4,6])); 
-
-    // return "Data delete successfully = $article" ;
-
-
-
-
-
-
-
-    // = truncate (Be careful & ID will start from 1 again) 
-    // Article::turncate();
-    // return "Data delete successfully = $" ;
-
-
-
-
-    // $article = Article::findOrFail(2);
-    // $article->delete();
-    $article = Article::destroy(collect([3, 4, 6]));
-
-    return "Data delete successfully = $article";
-
-
-
-
-});
-
-
-// 19SD 

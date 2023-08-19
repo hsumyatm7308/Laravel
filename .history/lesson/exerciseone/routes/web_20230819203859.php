@@ -650,53 +650,6 @@ Route::get('articles/update', function () {
 });
 
 
-Route::get('articles/delete', function () {
-    // $article = Article::find(1);
-
-    // $article = Article::findOrFail(2);
-    // $article->delete();
-    // return "Data delete successfully = $article" ;
-
-    // $article = Article::where('rating',3);
-    // $article->delete();
-    // return "Data delete successfully = $article" ;
-
-    // $article = Article::where('rating',3)->delete();
-    // return "Data delete successfully = $article" ;
-
-
-    // => Bulk Delete (Note :: must be primary key)
-
-    // $article = Article::destroy(12); 
-    // $article = Article::destroy(10,11); 
-    // $article = Article::destroy([10,11]); 
-    // $article = Article::destroy(collect([3,4,6])); 
-
-    // return "Data delete successfully = $article" ;
-
-
-
-
-
-
-
-    // = truncate (Be careful & ID will start from 1 again) 
-    // Article::turncate();
-    // return "Data delete successfully = $" ;
-
-
-
-
-    // $article = Article::findOrFail(2);
-    // $article->delete();
-    $article = Article::destroy(collect([3, 4, 6]));
-
-    return "Data delete successfully = $article";
-
-
-
-
+Route::get('articles/delete',function(){
+    return "Data delete successfully";
 });
-
-
-// 19SD 
