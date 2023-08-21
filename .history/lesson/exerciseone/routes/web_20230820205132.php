@@ -699,16 +699,16 @@ Route::get('articles/delete', function () {
 });
 
 
-Route::get('articles/restore', function () {
+Route::get('articles/restore',function(){
     // Article::withTrashed()->restore();
     // return "Restore from trash successfully";
 
-    Article::withTrashed()->where('rating', 5)->restore();
+    Article::withTrashed()->where('rating',5)->restore();
     return "Restore from trash successfully";
 });
 
 
-Route::get('articles/forcedelete', function () {
+Route::get('articles/forcedelete',function(){
 
 
     // $article = Article::findOrFail(5);
@@ -725,34 +725,11 @@ Route::get('articles/forcedelete', function () {
 });
 
 
-Route::get('articles/gettrash', function () {
+Route::get('articles/gettrash',function(){
+   
+    $articles = Article::all();
+    return $articles; //not inc from trash 
 
-    // $articles = Article::all();
-    // return $articles; //not inc from trash 
-
-    // $articles = Article::withTrashed()->get();
-    // return $articles;// all inc frm trash & non trasn 
-
-    // $articles = Article::withTrashed()->where('rating',3)->get();
-    // return $articles;// all inc frm trash & non trasn 
-
-
-
-    // $articles = Article::onlyTrashed()->where('rating',3)->get();
-    // return $articles;// all inc frm trash only
-
-
-
-    $articles = Article::onlyTrashed()->findOrFail(12);
-    return $articles; 
+    $articles = Article::withTrashed()->get();
+    return $articles;
 });
-
-
-Route::get('articles/restoresingle',function(){
-    
-    $articles = Article::onlyTrashed()->findOrFail(12)->restore();
-    return $articles; 
-});
-
-
-// 20TR 

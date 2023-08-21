@@ -699,60 +699,10 @@ Route::get('articles/delete', function () {
 });
 
 
-Route::get('articles/restore', function () {
+Route::get('articles/restore',function(){
     // Article::withTrashed()->restore();
     // return "Restore from trash successfully";
 
-    Article::withTrashed()->where('rating', 5)->restore();
+    Article::withTrashed()->where('rating',5)->restore();
     return "Restore from trash successfully";
 });
-
-
-Route::get('articles/forcedelete', function () {
-
-
-    // $article = Article::findOrFail(5);
-    // $article->forceDelete();
-    // $article->delete();
-
-
-    // *Result = 404 not found cuz 21 is already in soft delte 
-    $article = Article::findOrFail(21);
-    $article->delete();
-
-
-    return "Data Force Delete Successfully";
-});
-
-
-Route::get('articles/gettrash', function () {
-
-    // $articles = Article::all();
-    // return $articles; //not inc from trash 
-
-    // $articles = Article::withTrashed()->get();
-    // return $articles;// all inc frm trash & non trasn 
-
-    // $articles = Article::withTrashed()->where('rating',3)->get();
-    // return $articles;// all inc frm trash & non trasn 
-
-
-
-    // $articles = Article::onlyTrashed()->where('rating',3)->get();
-    // return $articles;// all inc frm trash only
-
-
-
-    $articles = Article::onlyTrashed()->findOrFail(12);
-    return $articles; 
-});
-
-
-Route::get('articles/restoresingle',function(){
-    
-    $articles = Article::onlyTrashed()->findOrFail(12)->restore();
-    return $articles; 
-});
-
-
-// 20TR 

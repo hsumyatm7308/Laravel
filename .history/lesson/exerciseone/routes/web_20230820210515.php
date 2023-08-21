@@ -744,15 +744,5 @@ Route::get('articles/gettrash', function () {
 
 
     $articles = Article::onlyTrashed()->findOrFail(12);
-    return $articles; 
+    return $articles; // all inc frm trash only
 });
-
-
-Route::get('articles/restoresingle',function(){
-    
-    $articles = Article::onlyTrashed()->findOrFail(12)->restore();
-    return $articles; 
-});
-
-
-// 20TR 
