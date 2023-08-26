@@ -9,7 +9,6 @@ use App\Http\Controllers\studentsController;
 use App\Http\Controllers\dashboardController;
 use Illuminate\Support\Facades\DB;
 use App\Models\Article;
-use App\Models\User;
 use App\Models\Type;
 use Carbon\Carbon;
 
@@ -761,54 +760,3 @@ Route::get('articles/restoresingle',function(){
 // =>Eloquent Relationships 
 
 // =>One to One 
-
-Route::get('users/{id}/article',function($id){
-   $articles = User::findOrFail($id)->customearticle->title;
-   $articles = User::findOrFail($id)->customearticle->description;
-   $articles = User::findOrFail($id)->customearticle->rating;
-
-   return $articles;
-});
-
-
-Route::get('articles/{id}/user',function($id){
-    $articles = Article::findOrFail($id)->userfromuserphp->name;
-   return $articles;
-
-});
-
-Route::get('articles/{id}/byusers',function($id){
-   $user = User::findOrFail($id);
-   foreach($user->customearticles as $article){
-
-    echo $article->title."<br>";
-
-   }
-   return $user;
-});
-
-
-// Many to Many 
-
-Route::get('user/{id}/role',function($id){
-    // $user = User::findOrFail($id);
-    // return $user->rolemanytomany;
-
-
-    // $user = User::findOrFail($id);
-    
-    // foreach($user->rolemanytomany as $role){
-
-    //     echo $role->name."<br>";
-    
-    //  }
-
-
-
-    $user = User::findOrFail($id)->rolemanytomany()->orderBy('id','desc')->get();
-    return $user;
-
-
-});
-
-// 26PV 

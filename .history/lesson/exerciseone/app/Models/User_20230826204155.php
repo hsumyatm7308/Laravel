@@ -34,19 +34,11 @@ class User extends Authenticatable
     ];
 
 
-    public function customearticle(){
+    public function article(){
         // Method 1 
         // return $this->hasOne('APP\Models\Article');
 
         // Method 2 
         return $this->hasOne(Article::class);
-    }
-
-    public function customearticles(){
-        return $this->hasMany(Article::class);
-    }
-
-    public function rolemanytomany(){
-        return $this->belongsToMany(Role::class);
     }
 }

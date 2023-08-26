@@ -45,8 +45,4 @@ class User extends Authenticatable
     public function customearticles(){
         return $this->hasMany(Article::class);
     }
-
-    public function rolemanytomany(){
-        return $this->belongsToMany(Role::class);
-    }
 }

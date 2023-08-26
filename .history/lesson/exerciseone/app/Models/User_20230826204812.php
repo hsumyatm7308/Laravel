@@ -41,12 +41,4 @@ class User extends Authenticatable
         // Method 2 
         return $this->hasOne(Article::class);
     }
-
-    public function customearticles(){
-        return $this->hasMany(Article::class);
-    }
-
-    public function rolemanytomany(){
-        return $this->belongsToMany(Role::class);
-    }
 }

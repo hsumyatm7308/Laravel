@@ -32,21 +32,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-
-    public function customearticle(){
-        // Method 1 
-        // return $this->hasOne('APP\Models\Article');
-
-        // Method 2 
-        return $this->hasOne(Article::class);
-    }
-
-    public function customearticles(){
-        return $this->hasMany(Article::class);
-    }
-
-    public function rolemanytomany(){
-        return $this->belongsToMany(Role::class);
-    }
 }

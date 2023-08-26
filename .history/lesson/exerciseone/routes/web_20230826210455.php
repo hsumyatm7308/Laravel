@@ -777,38 +777,6 @@ Route::get('articles/{id}/user',function($id){
 
 });
 
-Route::get('articles/{id}/byusers',function($id){
-   $user = User::findOrFail($id);
-   foreach($user->customearticles as $article){
-
-    echo $article->title."<br>";
-
-   }
-   return $user;
-});
-
-
-// Many to Many 
-
-Route::get('user/{id}/role',function($id){
-    // $user = User::findOrFail($id);
-    // return $user->rolemanytomany;
-
-
-    // $user = User::findOrFail($id);
-    
-    // foreach($user->rolemanytomany as $role){
-
-    //     echo $role->name."<br>";
-    
-    //  }
-
-
-
-    $user = User::findOrFail($id)->rolemanytomany()->orderBy('id','desc')->get();
-    return $user;
-
+Route::get('articles/{id}/buyusers',function($id){
 
 });
-
-// 26PV 

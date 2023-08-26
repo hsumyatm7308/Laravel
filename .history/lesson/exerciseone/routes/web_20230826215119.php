@@ -805,7 +805,7 @@ Route::get('user/{id}/role',function($id){
 
 
 
-    $user = User::findOrFail($id)->rolemanytomany()->orderBy('id','desc')->get();
+    $user = User::findOrFail($id)->rolemanytomany->get();
     return $user;
 
 

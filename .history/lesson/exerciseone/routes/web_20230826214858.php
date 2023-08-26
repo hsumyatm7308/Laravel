@@ -795,20 +795,13 @@ Route::get('user/{id}/role',function($id){
     // return $user->rolemanytomany;
 
 
-    // $user = User::findOrFail($id);
+    $user = User::findOrFail($id);
     
-    // foreach($user->rolemanytomany as $role){
+    foreach($user->rolemanytomany as $role){
 
-    //     echo $role->name."<br>";
+        echo $role->name."<br>";
     
-    //  }
-
-
-
-    $user = User::findOrFail($id)->rolemanytomany()->orderBy('id','desc')->get();
-    return $user;
-
-
+       }
 });
 
 // 26PV 

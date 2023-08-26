@@ -790,25 +790,7 @@ Route::get('articles/{id}/byusers',function($id){
 
 // Many to Many 
 
-Route::get('user/{id}/role',function($id){
-    // $user = User::findOrFail($id);
-    // return $user->rolemanytomany;
-
-
-    // $user = User::findOrFail($id);
-    
-    // foreach($user->rolemanytomany as $role){
-
-    //     echo $role->name."<br>";
-    
-    //  }
-
-
-
-    $user = User::findOrFail($id)->rolemanytomany()->orderBy('id','desc')->get();
+Route::get('user/{id}/role',function(){
+    $user = User::findOrFail($id);
     return $user;
-
-
 });
-
-// 26PV 

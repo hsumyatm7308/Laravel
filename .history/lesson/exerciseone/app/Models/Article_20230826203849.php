@@ -32,9 +32,7 @@ class Article extends Model
     protected $guarded = [];
 
     public function userfromuserphp(){
-        // return $this->belongsTo("APP\Models\Users");
-        return $this->belongsTo(User::class);
-
+        return $this->BelongsTo("APP\Models\Users");
     }
 }
 
