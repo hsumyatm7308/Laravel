@@ -824,8 +824,4 @@ Route::get('users/{id}/rolecreatedate',function($id){
 Route::get('genders/{id}/article',function($id){
     $gender = Gender::findOrFail($id);
 
-
-    foreach($gender->articles as $article){
-        echo $article->title."<br>";
-    }
 });

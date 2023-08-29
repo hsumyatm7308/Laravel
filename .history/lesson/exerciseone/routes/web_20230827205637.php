@@ -9,7 +9,6 @@ use App\Http\Controllers\studentsController;
 use App\Http\Controllers\dashboardController;
 use Illuminate\Support\Facades\DB;
 use App\Models\Article;
-use App\Models\Gender;
 use App\Models\User;
 use App\Models\Type;
 use Carbon\Carbon;
@@ -812,20 +811,7 @@ Route::get('user/{id}/role',function($id){
 
 });
 
-Route::get('users/{id}/rolecreatedate',function($id){
+Route::get('users/{id}/rolecreatedate',function(){
     $user = User::findOrFail($id);
-    foreach($user->rolecreatedate as $role){
-        echo $role->pivot->created_at. "<br>";
-    }
-});
-
-
-// Has Many Through 
-Route::get('genders/{id}/article',function($id){
-    $gender = Gender::findOrFail($id);
-
-
-    foreach($gender->articles as $article){
-        echo $article->title."<br>";
-    }
+    
 });

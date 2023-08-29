@@ -189,7 +189,6 @@ php artisan migrate
 
 
 php artisan migrate:status 
-php artisan migrate 
 
 =In Model (User.php)
 

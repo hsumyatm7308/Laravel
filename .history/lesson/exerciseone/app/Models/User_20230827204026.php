@@ -15,7 +15,7 @@ class User extends Authenticatable
 
     protected $table = 'users';
     protected $primaryKey = 'id';
-
+   
     protected $fillable = [
         'name',
         'email',
@@ -27,15 +27,14 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-
+  
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
 
 
-    public function customearticle()
-    {
+    public function customearticle(){
         // Method 1 
         // return $this->hasOne('APP\Models\Article');
 
@@ -43,32 +42,15 @@ class User extends Authenticatable
         return $this->hasOne(Article::class);
     }
 
-    public function customearticles()
-    {
+    public function customearticles(){
         return $this->hasMany(Article::class);
     }
 
-    public function rolemanytomany()
-    {
+    public function rolemanytomany(){
         // return $this->belongsToMany(Role::class); //obey by naming conversion
 
         // for Custom table name 
-        // belongsToMany(primarytable,secondarytable,secondarytable_fk,primarytable_fk)
-        // belongsToMany(related,table,foreignPivotkey,relativePivotKey)
-
-
-        // return $this->belongsToMany(Role::class, 'userroles', 'user_id', 'role_id');
-
-    }
-
-
-    //BelogntoMany with withPivot()
-    public function rolecreatedata(){
-
-        // return $this->belongsToMany(Role::class)->withPivot('created_at'); //Error cuse of   custom table name
-
-        return $this->belongsToMany(Role::class,'userroles','user_id','role_id')->withPivot('created_at');
-
+        return $this->belongsToMany(Role::class,'userroles','user_id','role_id');
 
     }
 }

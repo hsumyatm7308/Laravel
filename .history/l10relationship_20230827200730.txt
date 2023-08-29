@@ -114,84 +114,10 @@ $table->unsignedBigInteger('role_id);
 php artisan migrate:status 
 php artisan migrate 
 
-
-=>In Model (User.php)
   public function rolemanytomany(){
         return $this->belongsToMany(Role::class);
     }
 
 
-=Migration  (Laravel format name)
-
-php artisan migrate:rollback --pretend 
-php artisan migrate:rollback
 
 
-                                 //migration just naming. so can chage 
-php artisan make:migration create_users_roles_table --create="role_user";
-$table->unsignedBigInteger('user_id);
-$table->unsignedBigInteger('role_id);
-
-
-
-
-=Migration  (Custom table name )
-
-php artisan migrate:rollback --pretend 
-php artisan migrate:rollback
-
-php artisan migrate:status 
-
-
-                                 //migration just naming. so can chage 
-php artisan make:migration create_users_roles_table --create="userroles";
-$table->unsignedBigInteger('user_id);
-$table->unsignedBigInteger('role_id);
-
-
-
-
-=>User.php 
-
-    public function rolecreatedata(){
-
-        // return $this->belongsToMany(Role::class)->withPivot('created_at'); //Error cuse of   custom table name
-
-        return $this->belongsToMany(Role::class,'userroles','user_id','role_id')->withPivot('created_at');
-
-
-    }
-
-
-=Web.php 
-Route::get('users/{id}/rolecreatedate',function($id){
-    $user = User::findOrFail($id);
-    foreach($user->rolecreatedate as $role){
-        echo $role->pivot->created_at. "<br>";
-    }
-});
-
----------------------------------------------------
-
-= Has Many Through Relationship 
-
-= Migration 
-php artisan make:model Gender -m 
-$table->string(name);
-
-=Add Columns 
-php artisan make:migration add_gender_id _to_users_table --table=users
-=up by sort 
-$table->interger('gender_id')->after('password');
-=down 
-$table->dropColumn('gender_id');
-php artisan migrate 
-
-
-php artisan migrate:status 
-php artisan migrate 
-
-=In Model (User.php)
-
-
-=In Web

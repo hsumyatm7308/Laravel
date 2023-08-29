@@ -173,25 +173,3 @@ Route::get('users/{id}/rolecreatedate',function($id){
 
 ---------------------------------------------------
 
-= Has Many Through Relationship 
-
-= Migration 
-php artisan make:model Gender -m 
-$table->string(name);
-
-=Add Columns 
-php artisan make:migration add_gender_id _to_users_table --table=users
-=up by sort 
-$table->interger('gender_id')->after('password');
-=down 
-$table->dropColumn('gender_id');
-php artisan migrate 
-
-
-php artisan migrate:status 
-php artisan migrate 
-
-=In Model (User.php)
-
-
-=In Web

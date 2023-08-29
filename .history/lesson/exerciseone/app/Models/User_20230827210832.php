@@ -61,8 +61,6 @@ class User extends Authenticatable
 
     }
 
-
-    //BelogntoMany with withPivot()
     public function rolecreatedata(){
 
         // return $this->belongsToMany(Role::class)->withPivot('created_at'); //Error cuse of   custom table name
