@@ -900,9 +900,9 @@ Route::get('item/{id}/results',function($id){
     }
 });
 
-Route::get('tag/{id}/article',function($id){
+Route::get('tag/{id}/results',function($id){
     $item = Tag::findOrFail($id);
-    foreach($item->articles as $article){
+    foreach($item->articel as $article){
         echo $article->title. "<br>";
     }
 });

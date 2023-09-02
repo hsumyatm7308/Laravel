@@ -3,7 +3,6 @@
 use App\Http\Controllers\employeesController;
 use App\Http\Controllers\membersController;
 use App\Http\Controllers\staffsController;
-use App\Models\Tag;
 use Doctrine\DBAL\Types\Types;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\studentsController;
@@ -900,17 +899,9 @@ Route::get('item/{id}/results',function($id){
     }
 });
 
-Route::get('tag/{id}/article',function($id){
-    $item = Tag::findOrFail($id);
-    foreach($item->articles as $article){
-        echo $article->title. "<br>";
-    }
-});
-
-
-Route::get('tag/{id}/items',function($id){
-    $item = Tag::findOrFail($id);
-    foreach($item->item as $item){
-        echo $item->name. "<br>";
+Route::get('item/{id}/results',function($id){
+    $item = Item::findOrFail($id);
+    foreach($item->tags as $tag){
+        echo $tag->name. "<br>";
     }
 });

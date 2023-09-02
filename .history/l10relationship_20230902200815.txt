@@ -340,52 +340,9 @@ Route::get('articles/{id}/comment',function($id){
 
 
 Route::get('Users/{id}/comment',function($id){
-    $article = User::findOrFail($id) ;
+    $article = Article::findOrFail($id) ;
 
     foreach($article->comments as $comment){
         return $comment. "<br>";
     }
 });
-
-
----------------
-
-Migration 
-
-php artisan make:model Item -m 
-php artisan make:model Tag -m 
-
-$table->string('name');
-
-php artisan make:model Taggable -m 
-
-$table->interger('tag_id');
-$table->interger('taggable_id');
-$table->string('taggable_type');
-
-
-php artisan make:model Tag -m 
-
-
-php artisan migrate:status 
-php artisan migrate 
-
-
-= In model (Article.php)
-public function tags(){
-    //morphToMany(relatedtable,name)
-    return $this->morphToMany(Tag::class,'taggable');
-}
-
-=In Model(Tag.php)
-  public function articles(){
-        //morphedByMany(relatedtable,name)
-    
-        return $this->morphByMany(Tag::class,'taggable');
-    }
-    
-    public function items(){
-        return $this->morphByMany(Item::class,'taggable');
-
-    }
-    

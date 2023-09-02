@@ -63,22 +63,20 @@ class User extends Authenticatable
 
 
     //BelogntoMany with withPivot()
-    public function rolecreatedata()
-    {
+    public function rolecreatedata(){
 
         // return $this->belongsToMany(Role::class)->withPivot('created_at'); //Error cuse of   custom table name
 
-        return $this->belongsToMany(Role::class, 'userroles', 'user_id', 'role_id')->withPivot('created_at');
+        return $this->belongsToMany(Role::class,'userroles','user_id','role_id')->withPivot('created_at');
 
 
     }
 
 
-    public function photos()
-    {
+    public function photos(){
         //morphMany(relatedtable,name);
-        return $this->morphMany(Photo::class, 'imageable');
-    }
+        return $this->morphMany(Photo::class,'imageable');
+}
 
 
 }

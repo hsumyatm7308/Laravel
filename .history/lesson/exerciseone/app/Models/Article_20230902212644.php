@@ -52,9 +52,6 @@ class Article extends Model
     
         return $this->morphToMany(Tag::class,'taggable');
     }
-
-
-    
     
     
 

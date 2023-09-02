@@ -48,13 +48,10 @@ class Article extends Model
 
 
     public function articles(){
-        //morphedToMany(relatedtable,name)
+        //morphedByMany(relatedtable,name)
     
-        return $this->morphToMany(Tag::class,'taggable');
+        return $this->morphByMany(Tag::class,'taggable');
     }
-
-
-    
     
     
 

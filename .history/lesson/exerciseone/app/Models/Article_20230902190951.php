@@ -42,20 +42,9 @@ class Article extends Model
     public function photos()
     {
         //morphMany(relatedtable,name);
-        return $this->morphMany(Photo::class, 'imageable');  //because of           $table->interger('  ** imageable_id')->unsignedBigInteger(); 
+        return $this->morphMany(Photo::class, 'imageable');  //because of           $table->interger('** imageable_id')->unsignedBigInteger(); 
     }
 
 
-
-    public function articles(){
-        //morphedToMany(relatedtable,name)
-    
-        return $this->morphToMany(Tag::class,'taggable');
-    }
-
-
-    
-    
-    
 
 }

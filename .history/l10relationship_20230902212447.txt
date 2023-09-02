@@ -353,7 +353,6 @@ Route::get('Users/{id}/comment',function($id){
 Migration 
 
 php artisan make:model Item -m 
-php artisan make:model Tag -m 
 
 $table->string('name');
 
@@ -363,10 +362,6 @@ $table->interger('tag_id');
 $table->interger('taggable_id');
 $table->string('taggable_type');
 
-
-php artisan make:model Tag -m 
-
-
 php artisan migrate:status 
 php artisan migrate 
 
@@ -374,18 +369,11 @@ php artisan migrate
 = In model (Article.php)
 public function tags(){
     //morphToMany(relatedtable,name)
-    return $this->morphToMany(Tag::class,'taggable');
+    return $this->morphToMany(Tag::class,'taggable')
 }
 
 =In Model(Tag.php)
-  public function articles(){
-        //morphedByMany(relatedtable,name)
-    
-        return $this->morphByMany(Tag::class,'taggable');
-    }
-    
-    public function items(){
-        return $this->morphByMany(Item::class,'taggable');
+public function articles(){
+    //morphedByMany(relatedtable,name)
 
-    }
-    
+}

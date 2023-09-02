@@ -3,7 +3,6 @@
 use App\Http\Controllers\employeesController;
 use App\Http\Controllers\membersController;
 use App\Http\Controllers\staffsController;
-use App\Models\Tag;
 use Doctrine\DBAL\Types\Types;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\studentsController;
@@ -13,8 +12,6 @@ use App\Models\Article;
 use App\Models\Gender;
 use App\Models\User;
 use App\Models\Type;
-use App\Models\Item;
-use App\Models\Photo;
 use Carbon\Carbon;
 
 
@@ -838,7 +835,7 @@ Route::get('genders/{id}/article',function($id){
 // = Polymorphic Relationship 
 
 Route::get('users/{id}/photo',function($id){
-    $user = User::findOrFail($id);
+    $user = User::findOrFind($id);
 
     foreach($user->photos as $photo){
         echo $photo->path. "<br>";
@@ -848,69 +845,10 @@ Route::get('users/{id}/photo',function($id){
 
 
 Route::get('users/{id}/photo',function($id){
-    $article = Article::findOrFail($id);
+    $user = User::findOrFind($id);
 
     foreach($article->photos as $photo){
         echo $photo->path. "<br>";
     }
 
-});
-
-
-// Reverse thinking 
-
-Route::get('photo/{id}/result',function($id){
-    $result = Photo::findOrFail($id);
-    echo $result->imageable. "<br>";  //Note:: 
-
-   
-    $result = Photo::findOrFind($id);
-    echo $result->imageable->title. "<br>";  //Note:: 
-
-});
-
-
-// ------ 
-
-Route::get('articles/{id}/comment',function($id){
-    $article = Article::findOrFail($id) ;
-
-    foreach($article->comments as $comment){
-        return $comment->message. "<br>";
-    }
-});
-
-
-
-
-Route::get('Users/{id}/comment',function($id){
-    $article = User::findOrFail($id) ;
-
-    foreach($article->comments as $comment){
-        return $comment. "<br>";
-    }
-});
-
-// =>Polymorphic Relactionship Many to Many 
-
-Route::get('item/{id}/results',function($id){
-    $item = Item::findOrFail($id);
-    foreach($item->tags as $tag){
-        echo $tag->name. "<br>";
-    }
-});
-
-Route::get('tag/{id}/article',function($id){
-    $item = Tag::findOrFail($id);
-    foreach($item->articles as $article){
-        echo $article->title. "<br>";
-    }
-});
-
-
-Route::get('tag/{id}/items',function($id){
-    $item = Tag::findOrFail($id);
-    foreach($item->item as $item){
-        echo $item->name. "<br>";
-    }
 });

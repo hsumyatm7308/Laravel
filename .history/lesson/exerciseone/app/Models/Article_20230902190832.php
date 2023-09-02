@@ -31,31 +31,21 @@ class Article extends Model
     //Method 2 
     protected $guarded = [];
 
-    public function userfromuserphp()
-    {
+    public function userfromuserphp(){
         // return $this->belongsTo("APP\Models\Users");
         return $this->belongsTo(User::class);
 
     }
 
 
-    public function photos()
-    {
+    public function photos(){
         //morphMany(relatedtable,name);
-        return $this->morphMany(Photo::class, 'imageable');  //because of           $table->interger('  ** imageable_id')->unsignedBigInteger(); 
-    }
-
-
-
-    public function articles(){
-        //morphedToMany(relatedtable,name)
-    
-        return $this->morphToMany(Tag::class,'taggable');
-    }
-
-
-    
-    
-    
-
+        return $this->morphMany(Photo::class,'imageable');
 }
+}
+
+
+
+
+
+
