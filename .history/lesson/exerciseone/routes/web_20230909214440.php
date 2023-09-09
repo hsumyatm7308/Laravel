@@ -1185,10 +1185,10 @@ Route::get('users/{id}/role/update', function ($id) {
 Route::get('users/{id}/role/read', function ($id) {
     $user = User::findOrFail($id);
 
-    if ($user->has('roles')) {
+    // if ($user->has('roles')) {
         foreach ($user->rolemanytomany as $role) {
             $role->name . "<br";
         }
-    }
+    // }
 
 });

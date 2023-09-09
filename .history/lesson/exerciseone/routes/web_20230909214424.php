@@ -1182,7 +1182,7 @@ Route::get('users/{id}/role/update', function ($id) {
 
 
 
-Route::get('users/{id}/role/read', function ($id) {
+Route::get('users/{id}/role/update', function ($id) {
     $user = User::findOrFail($id);
 
     if ($user->has('roles')) {

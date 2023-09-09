@@ -9,9 +9,8 @@ class Role extends Model
 {
     use HasFactory;
     protected $table = "roles";
-    protected $primaryKey = "id";
-    protected $fillable = [
-        'name'
-    ];
-    
+protected $primaryKey = "id";
+protected $fillable = [
+    'name'
+]
 }

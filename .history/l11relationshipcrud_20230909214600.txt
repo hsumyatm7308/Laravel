@@ -307,7 +307,7 @@ protected $fillable = [
     }
 
 
-= Web 
+=Web 
 
 // Route::get('users/{id}/role/insert',function($id){
 //     $user = User::findOrFail($id);

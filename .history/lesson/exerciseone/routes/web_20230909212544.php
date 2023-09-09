@@ -1128,7 +1128,7 @@ Route::get("users/{id}/article/read", function ($id) {
 
 Route::get("users/{id}/article/delete", function ($id) {
 
-    // Route::get("users/article/delete/{rating}", function ($rating) {
+// Route::get("users/article/delete/{rating}", function ($rating) {
     // NOte:: error  cuz this is one to many relationship 
     // $user = User::findOrFail($id);
     // $user->customearticles->delete();
@@ -1149,46 +1149,15 @@ Route::get("users/{id}/article/delete", function ($id) {
     // $user = Article::where('rating','=',5);
     // $user->delete();
 
-
+    
 
 });
 
 // -------------------------------------------- 
 
-// Route::get('users/{id}/role/insert',function($id){
-//     $user = User::findOrFail($id);
-//     $user->rolemanytomany()->save(new Role([
-//      'name' => 'adviser'
-//     ]));
-
-//     return "Data Inserted";
-// });
-
-
-Route::get('users/{id}/role/update', function ($id) {
+Route::get('users/{id}/role/insert',function($id){
     $user = User::findOrFail($id);
-
-    if ($user->has('roles')) {
-        foreach ($user->rolemanytomany as $role) {
-            if ($role->name = "admin") {
-                $role->name = "co-worker";
-                $role->save();
-            }
-        }
-    }
-    return $user;
-});
-
-
-
-
-Route::get('users/{id}/role/read', function ($id) {
-    $user = User::findOrFail($id);
-
-    if ($user->has('roles')) {
-        foreach ($user->rolemanytomany as $role) {
-            $role->name . "<br";
-        }
-    }
-
+    $user->rolemanytomany()->save(new Role([
+     'name' => 'adviser'
+    ]));
 });

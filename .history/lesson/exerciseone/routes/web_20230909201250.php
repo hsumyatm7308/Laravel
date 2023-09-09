@@ -3,7 +3,6 @@
 use App\Http\Controllers\employeesController;
 use App\Http\Controllers\membersController;
 use App\Http\Controllers\staffsController;
-use App\Models\Role;
 use App\Models\Tag;
 use Doctrine\DBAL\Types\Types;
 use Illuminate\Support\Facades\Route;
@@ -1074,121 +1073,18 @@ Route::get('users/{id}/article/insert', function ($id) {
 
 
 Route::get('users/{id}/article/update', function ($id) {
-    // $article = Article::whereUserId($id)->first();
-    // $article->title = "this is articleb 10";
-    // $article->description = "Loream Ipsum is kj;a";
-    // $article->rating = 1;
-    // $article->save();
-    // return "Data Updated";
+    $article = Article::whereUserId($id)->first();
+    $article->title = "this is articleb 10";
+    $article->description = "Loream Ipsum is kj;a";
+    $article->user_id = $id;
+    $article->rating = 1;
+    $article->save();
+    //   return "Data Updated";
 
-    // $articles = Article::whereUserId($id)->get();
-    // foreach ($articles as $article) {
-    //     $article->title = "this is new article 001";
-    //     $article->description = "Loream";
-    //     $article->save();
+    // $phones = Article::whereUserId($id)->get();
+    // foreach ($phones as $phone) {
+    //     $phone->number = "09-111-112";
+    //     $phone->save();
     // }
-    // return "Data Update";
-
-    // $user = User::findOrFail($id); 
-    // $user->customearticles()->where('id' , '=', 1)->update([
-    //     'title'=>'New Title 1000',
-    //     'rating'=> 3
-    // ]);
-    // return "Data Update";
-
-
-
-    $user = User::findOrFail($id);
-    // Note:find Userid and continue search Article id 
-    // $user->customearticles()->where('id', '=', 1)->update([
-    //     'title' => 'New Title Id One',
-    //     'rating' => 5
-    // ]);
-    // return "Data Update";
-
-
-    // Note:find Userid and continue search Article id 
-    $user->customearticles()->where('rating', '=', 5)->update([
-        'title' => 'New Title rating 3',
-        'rating' => 2
-    ]);
     return "Data Update";
-});
-
-Route::get("users/{id}/article/read", function ($id) {
-    $user = User::findOrFail($id);
-
-
-    foreach ($user->customearticles as $article) {
-        echo $article->title . "<br>";
-
-    }
-});
-
-
-Route::get("users/{id}/article/delete", function ($id) {
-
-    // Route::get("users/article/delete/{rating}", function ($rating) {
-    // NOte:: error  cuz this is one to many relationship 
-    // $user = User::findOrFail($id);
-    // $user->customearticles->delete();
-
-
-    // $user = User::findOrFail($id);
-    // $user->customearticles()->whereId(7)->delete();
-    // return "Data delete";
-
-
-    // $user = User::findOrFail();
-    // $user->customearticles()->delete();
-    // return "Data delete";
-
-
-
-    // ---------------------- 
-    // $user = Article::where('rating','=',5);
-    // $user->delete();
-
-
-
-});
-
-// -------------------------------------------- 
-
-// Route::get('users/{id}/role/insert',function($id){
-//     $user = User::findOrFail($id);
-//     $user->rolemanytomany()->save(new Role([
-//      'name' => 'adviser'
-//     ]));
-
-//     return "Data Inserted";
-// });
-
-
-Route::get('users/{id}/role/update', function ($id) {
-    $user = User::findOrFail($id);
-
-    if ($user->has('roles')) {
-        foreach ($user->rolemanytomany as $role) {
-            if ($role->name = "admin") {
-                $role->name = "co-worker";
-                $role->save();
-            }
-        }
-    }
-    return $user;
-});
-
-
-
-
-Route::get('users/{id}/role/read', function ($id) {
-    $user = User::findOrFail($id);
-
-    if ($user->has('roles')) {
-        foreach ($user->rolemanytomany as $role) {
-            $role->name . "<br";
-        }
-    }
-
 });

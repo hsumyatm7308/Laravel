@@ -3,7 +3,6 @@
 use App\Http\Controllers\employeesController;
 use App\Http\Controllers\membersController;
 use App\Http\Controllers\staffsController;
-use App\Models\Role;
 use App\Models\Tag;
 use Doctrine\DBAL\Types\Types;
 use Illuminate\Support\Facades\Route;
@@ -1126,9 +1125,8 @@ Route::get("users/{id}/article/read", function ($id) {
 });
 
 
-Route::get("users/{id}/article/delete", function ($id) {
 
-    // Route::get("users/article/delete/{rating}", function ($rating) {
+Route::get("users/article/delete", function () {
     // NOte:: error  cuz this is one to many relationship 
     // $user = User::findOrFail($id);
     // $user->customearticles->delete();
@@ -1139,56 +1137,8 @@ Route::get("users/{id}/article/delete", function ($id) {
     // return "Data delete";
 
 
-    // $user = User::findOrFail();
-    // $user->customearticles()->delete();
-    // return "Data delete";
-
-
-
-    // ---------------------- 
-    // $user = Article::where('rating','=',5);
-    // $user->delete();
-
-
-
-});
-
-// -------------------------------------------- 
-
-// Route::get('users/{id}/role/insert',function($id){
-//     $user = User::findOrFail($id);
-//     $user->rolemanytomany()->save(new Role([
-//      'name' => 'adviser'
-//     ]));
-
-//     return "Data Inserted";
-// });
-
-
-Route::get('users/{id}/role/update', function ($id) {
-    $user = User::findOrFail($id);
-
-    if ($user->has('roles')) {
-        foreach ($user->rolemanytomany as $role) {
-            if ($role->name = "admin") {
-                $role->name = "co-worker";
-                $role->save();
-            }
-        }
-    }
-    return $user;
-});
-
-
-
-
-Route::get('users/{id}/role/read', function ($id) {
-    $user = User::findOrFail($id);
-
-    if ($user->has('roles')) {
-        foreach ($user->rolemanytomany as $role) {
-            $role->name . "<br";
-        }
-    }
+    $user = User::findOrFail()->all();
+    $user->customearticles()->where('rating','=',5)->delete();
+    return "Data delete";
 
 });
