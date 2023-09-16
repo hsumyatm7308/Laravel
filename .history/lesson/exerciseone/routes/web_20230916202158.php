@@ -1326,7 +1326,7 @@ Route::get('users/{id}/photo/updateimgtype', function ($id) {
 Route::get('users/{id}/photo/delete', function ($id) {
     $user = User::findOrFail($id);
     $user->photos()->whereId(1)->delete();
-
+  
 
     // $user->photos()->delete();
 
@@ -1342,91 +1342,13 @@ Route::get('users/{id}/photo/delete', function ($id) {
 
 // =>Eloquent Polymorphic Many to Many Relationship 
 
-Route::get('items/tag/{id}/insert', function ($id) {
+Route::get('items/tag/{id}/insert',function($id){
 
-    //   Note:: check Item table & Taggable table (action/action)
+
     $item = Item::create([
-        'name' => 'Joey'
+        'name'=>'Joey'
     ]);
 
     $tag = Tag::findOrFail($id);
-
-    $item->tags()->save($tag);
-
-});
-
-
-Route::get('items/{id}/tag/read', function ($id) {
-
-
-
-    $item = Item::findOrFail($id);
-
-    if ($item->has('tags')) {
-        foreach ($item->tags as $tag) {
-            echo $tag->name . "<br>";
-        }
-    }
-
-    return "Data read";
-
-});
-
-
-
-
-Route::get('items/{id}/tag/update', function ($id) {
-
-
-
-    $item = Item::findOrFail($id);
-
-    // if ($item->has('tags')) {
-    //     foreach ($item->tags as $tag) {
-    //         return $tag->whereId(4)->update([
-
-    //             'name' => 'Insect Killer'
-    //         ]);
-    //     }
-    // }
-
-    // return "Data read";
-
-    // $item = Item::findOrFail($id); //remove or add of not data exit
-    // $item->tags()->save(1);
-    // return "DAta Sync"
-
-
-    // $item = Item::findOrFail($id); //added
-    // $item->tags()->attach(4);
-    // return "DAta attacg";
-
-    $item = Item::findOrFail($id); //remove or add of not data exit
-    $item->tags()->sync([4,5]);
-    return "DAta Sync";
-
-});
-
-
-
-Route::get('items/{id}/tag/delete', function ($id) {
-
-
-
-    $item = Item::findOrFail($id);
-
-    if ($item->has('tags')) {
-        foreach ($item->tags as $tag) {
-            return $tag->whereId(1)->delete();
-
-        }
-    }
-
-
-
-    // $item = Item::findOrFail($id); //added
-    // $item->tags()->delete(4);
-    // return "DAta delete";
-
 
 });

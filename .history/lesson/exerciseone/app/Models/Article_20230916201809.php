@@ -54,7 +54,7 @@ class Article extends Model
     }
 
 
-    public function tags(){
+    public function articles(){
         //morphedToMany(relatedtable,name)
     
         return $this->morphToMany(Tag::class,'taggable');

@@ -1406,27 +1406,3 @@ Route::get('items/{id}/tag/update', function ($id) {
     return "DAta Sync";
 
 });
-
-
-
-Route::get('items/{id}/tag/delete', function ($id) {
-
-
-
-    $item = Item::findOrFail($id);
-
-    if ($item->has('tags')) {
-        foreach ($item->tags as $tag) {
-            return $tag->whereId(1)->delete();
-
-        }
-    }
-
-
-
-    // $item = Item::findOrFail($id); //added
-    // $item->tags()->delete(4);
-    // return "DAta delete";
-
-
-});

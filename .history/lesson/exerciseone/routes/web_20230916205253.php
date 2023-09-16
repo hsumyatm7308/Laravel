@@ -1417,16 +1417,26 @@ Route::get('items/{id}/tag/delete', function ($id) {
 
     if ($item->has('tags')) {
         foreach ($item->tags as $tag) {
-            return $tag->whereId(1)->delete();
+            return $tag->whereId(4)->delete([
 
+                'name' => 'Insect Killer'
+            ]);
         }
     }
 
+    // return "Data read";
+
+    // $item = Item::findOrFail($id); //remove or add of not data exit
+    // $item->tags()->save(1);
+    // return "DAta Sync"
 
 
     // $item = Item::findOrFail($id); //added
-    // $item->tags()->delete(4);
-    // return "DAta delete";
+    // $item->tags()->attach(4);
+    // return "DAta attacg";
 
+    // $item = Item::findOrFail($id); //remove or add of not data exit
+    // $item->tags()->sync([4,5]);
+    // return "DAta Sync";
 
 });

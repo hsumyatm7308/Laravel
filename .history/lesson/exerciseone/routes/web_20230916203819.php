@@ -1381,52 +1381,15 @@ Route::get('items/{id}/tag/update', function ($id) {
 
     $item = Item::findOrFail($id);
 
-    // if ($item->has('tags')) {
-    //     foreach ($item->tags as $tag) {
-    //         return $tag->whereId(4)->update([
-
-    //             'name' => 'Insect Killer'
-    //         ]);
-    //     }
-    // }
-
-    // return "Data read";
-
-    // $item = Item::findOrFail($id); //remove or add of not data exit
-    // $item->tags()->save(1);
-    // return "DAta Sync"
-
-
-    // $item = Item::findOrFail($id); //added
-    // $item->tags()->attach(4);
-    // return "DAta attacg";
-
-    $item = Item::findOrFail($id); //remove or add of not data exit
-    $item->tags()->sync([4,5]);
-    return "DAta Sync";
-
-});
-
-
-
-Route::get('items/{id}/tag/delete', function ($id) {
-
-
-
-    $item = Item::findOrFail($id);
-
     if ($item->has('tags')) {
         foreach ($item->tags as $tag) {
-            return $tag->whereId(1)->delete();
+            return $tag->whereId(4)->update([
 
+                'name' => 'Insect Killer'
+            ]);
         }
     }
 
-
-
-    // $item = Item::findOrFail($id); //added
-    // $item->tags()->delete(4);
-    // return "DAta delete";
-
+    return "Data read";
 
 });

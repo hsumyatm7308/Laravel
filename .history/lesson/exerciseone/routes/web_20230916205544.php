@@ -1417,16 +1417,16 @@ Route::get('items/{id}/tag/delete', function ($id) {
 
     if ($item->has('tags')) {
         foreach ($item->tags as $tag) {
-            return $tag->whereId(1)->delete();
+            return $tag->whereId(4)->delete();
 
         }
     }
 
 
 
-    // $item = Item::findOrFail($id); //added
-    // $item->tags()->delete(4);
-    // return "DAta delete";
+    $item = Item::findOrFail($id); //added
+    $item->tags()->delete(4);
+    return "DAta attacg";
 
 
 });

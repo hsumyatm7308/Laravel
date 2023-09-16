@@ -11,10 +11,9 @@ class Item extends Model
 
     protected $table = "items";
     protected $primaryKey = "id";
-    protected $fillable = [
-   
-        'name'
-    ];
+    protected $fillable =m[
+
+    ]''
 
 
     public function tags(){
