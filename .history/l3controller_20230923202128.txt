@@ -38,5 +38,5 @@ php artisan make:controller staffsController
 
 php artisan make:controller CountriesController --resource 
 (or)
-php artisan make:controller CountriesController --r  
+php artisan make:controller CountriesController --r 
 
