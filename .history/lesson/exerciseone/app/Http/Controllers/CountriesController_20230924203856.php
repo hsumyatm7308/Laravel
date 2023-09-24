@@ -17,7 +17,7 @@ class CountriesController extends Controller
 
         // return "I am index page";
         $countries = Country::all();
-        return view('countries.index', compact('countries'));
+        return view('countries.index',compact('countries'));
     }
 
     /**
@@ -27,12 +27,12 @@ class CountriesController extends Controller
     {
         //
 
-        return view('countries.create');
+     return  view('countries.create');
     }
 
     /**
      * Store a newly created resource in storage.
-     */
+     */ 
     public function store(Request $request)
     {
         //
@@ -52,11 +52,11 @@ class CountriesController extends Controller
 
 
         $country = new Country;
-        $country->name = $request['name'];
-        $country->capital = $request['capital'];
-        $country->currency = $request['currency'];
-        $country->content = $request['content'];
-        $country->userid = $request['userid'];
+        $country->name=$request['name'];
+        $country->capital=$request['capital'];
+        $country->currency=$request['currency'];
+        $country->content=$request['content'];
+        $country->userid=$request['userid'];
         $country->save();
 
 
@@ -73,7 +73,7 @@ class CountriesController extends Controller
     {
         //
         $countries = Country::findOrFail($id);
-        return view('countries.show', ['country' => $countries]);
+        return view('countries.show',['country'=>$countries]);
     }
 
     /**
@@ -83,7 +83,7 @@ class CountriesController extends Controller
     {
         //
         $country = Country::findOrFail($id);
-        return view('countries.edit')->with("country", $country);
+        return view('countries.edit')->with("country",$country);
     }
 
     /**
@@ -92,16 +92,6 @@ class CountriesController extends Controller
     public function update(Request $request, string $id)
     {
         //
-
-        Country::findOrFail($id)->update([
-            'name' => $request['name'],
-            'capital' => $request['capital'],
-            'content' => $request['content'],
-            'currency' => $request['currency'],
-            'userid' => $request['userid'],
-        ]);
-
-        return redirect(route('countries.index'));
     }
 
     /**
@@ -110,11 +100,5 @@ class CountriesController extends Controller
     public function destroy(string $id)
     {
         //
-        $country = Country::findOrFail($id);
-        $country->delete();
-        // return redirect(route('countries.index'));
-        return redirect()->route('countries.index')->back();
-
-        // return redirect()->back();
     }
 }

@@ -1434,6 +1434,4 @@ Route::get('items/{id}/tag/delete', function ($id) {
 
 
 Route::resource('countries',CountriesController::class);
-
-// Route::resource('countries',CountriesController::class)->except('destroy');
-// Route::get('countries/delete/{id}',[CountriesController::class,'destroy'])->name('countries.delete');
+Route::get('countries/delete/{id}',[CountriesController::class]);

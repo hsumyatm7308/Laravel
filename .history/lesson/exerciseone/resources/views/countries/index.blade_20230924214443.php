@@ -5,7 +5,7 @@
 
 <h1>Index Page</h1>
 
-<div class="col-md-12 container mb-3">
+<div class="col-md-12">
     <a href="{{route('countries.create')}}" class="btn btn-primary btn-sm rounded-0">Create New Country</a>
 </div>
 

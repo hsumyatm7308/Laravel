@@ -14,7 +14,7 @@
 
     </ul>
 
-    <a href="{{route('countries.index')}}" class="btn btn-primary rounded-0 mt-3">Back</a>
+    <a href="{{route('countries.index')}}" class="btn btn-primary rounded-0">Back</a>
 
 </div>
 

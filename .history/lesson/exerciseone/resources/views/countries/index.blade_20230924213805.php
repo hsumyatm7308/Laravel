@@ -5,13 +5,13 @@
 
 <h1>Index Page</h1>
 
-<div class="col-md-12 container mb-3">
+<div class="col-md-12">
     <a href="{{route('countries.create')}}" class="btn btn-primary btn-sm rounded-0">Create New Country</a>
 </div>
 
 <div class="col-md-12">
 
-<table class="table table-sm table-hover border container">
+<table class="table table-sm table-hover border">
     <thead>
         <tr>
             <th>No</th>
@@ -41,7 +41,7 @@
 
             {{-- <a href="{{route('countries.delete',$country->id)}}" class="text-danger"><i class="fas fa-trash-alt"></i></a> --}}
 
-             <form action="{{route('countries.destroy',$country->id)}}" method="POST" class="d-flex justify-content-center align-items-center">
+             <form action="{{route('countries.destroy',$country->id)}}" method="POST">
                 @csrf 
                 @method("DELETE")
                <button type="submit" class="text-danger"><i class="fas fa-trash-alt"></i></button>

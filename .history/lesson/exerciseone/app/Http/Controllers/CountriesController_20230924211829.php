@@ -112,9 +112,5 @@ class CountriesController extends Controller
         //
         $country = Country::findOrFail($id);
         $country->delete();
-        // return redirect(route('countries.index'));
-        return redirect()->route('countries.index')->back();
-
-        // return redirect()->back();
     }
 }
