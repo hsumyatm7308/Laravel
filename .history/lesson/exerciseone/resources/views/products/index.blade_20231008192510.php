@@ -13,9 +13,9 @@
         <tr>
         <th>No</th>
         <th>Name</th>
-        <th>Price</th>
         <th>Image</th>
-
+        <th>Price</th>
+        <th>User ID</th>
         <th>Created At</th>
         <th>Updated At</th>
         <th>Action </th>
@@ -28,19 +28,8 @@
             <td>{{$product->name}}</td>
             <td>{{$product->price}}</td>
             <td>
-             <img src="{{ asset($product->image) }}" class="rounded" style="width:50px;height:50px" alt="{{$product->image}}">
-            <img src="{{ asset('images/'.$product->image) }}" class="rounded" style="width:50px;height:50px" alt="{{$product->image}}">
 
-            <img src="{{ url($product->image) }}" class="rounded" style="width:50px;height:50px" alt="{{$product->image}}">
-            <img src="{{ URL::asset('images/' . $product->image) }}" class="rounded" style="width: 50px; height: 50px" alt="{{ $product->image }}">
-            <img src="{{ asset($product->image) }}" class="rounded" style="width: 50px; height: 50px" alt="{{ $product->image }}">
- 
-
-            <img src="{{ asset('storage/public'.$product->image) }}" class="rounded" style="width: 50px; height: 50px" alt="{{ $product->image }}">
-
-            <img src="{{ asset('storage/images/'.$product->image) }}" class="rounded" style="width: 50px; height: 50px" alt="{{ $product->image }}">
-
-
+            <img src="{{ asset($product->image) }}" class="rounded" style="width:50px;height:50px" alt="{{$product->image}}">
             {{$product->image}}
 
             </td>

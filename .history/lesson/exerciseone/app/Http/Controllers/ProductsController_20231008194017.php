@@ -44,8 +44,6 @@ class ProductsController extends Controller
         //   2. Storage Folder  / Local Driver (storage / app/customfolder)   
         // $request->image->store('path/')
 
-        // php artisan stroage:link 
-
         // use Illuminate\Support\Facades\Storage 
         // $storage:;disk('local').put($file,'content','optional')
 
@@ -74,20 +72,20 @@ class ProductsController extends Controller
         // }
 
 
-        // if ($file) {
-        //     $fname = $file->getClientOriginalName();
+        if ($file) {
+            $fname = $file->getClientOriginalName();
 
-        //     // $imagenewname = date('ymdHis') . $fname;
-        //     // $imagenewname = time() . $fname;
-        //     $imagenewname = uniqid() . $fname;
-
-
-        //     // dd($imagenewname);
-        //     $filerul = $file->move(public_path('images'), $imagenewname);
-        //     $product->image = $filerul;
+            // $imagenewname = date('ymdHis') . $fname;
+            // $imagenewname = time() . $fname;
+            $imagenewname = uniqid() . $fname;
 
 
-        // }
+            // dd($imagenewname);
+            $filerul = $file->move(public_path('images'), $imagenewname);
+            $product->image = $filerul;
+
+
+        }
 
 
         // if($request->hasFile('image')){

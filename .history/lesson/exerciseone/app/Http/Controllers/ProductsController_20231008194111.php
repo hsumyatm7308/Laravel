@@ -44,8 +44,6 @@ class ProductsController extends Controller
         //   2. Storage Folder  / Local Driver (storage / app/customfolder)   
         // $request->image->store('path/')
 
-        // php artisan stroage:link 
-
         // use Illuminate\Support\Facades\Storage 
         // $storage:;disk('local').put($file,'content','optional')
 

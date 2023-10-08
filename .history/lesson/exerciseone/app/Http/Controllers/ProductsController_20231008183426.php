@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class ProductsController extends Controller
 {
@@ -43,8 +42,6 @@ class ProductsController extends Controller
 
         //   2. Storage Folder  / Local Driver (storage / app/customfolder)   
         // $request->image->store('path/')
-
-        // php artisan stroage:link 
 
         // use Illuminate\Support\Facades\Storage 
         // $storage:;disk('local').put($file,'content','optional')
@@ -102,43 +99,16 @@ class ProductsController extends Controller
 
 
 
-        // if($request->hasFile('image')){
-        //     $fnameext = $file->extension(); //jpg 
-        //     $imagenewname = uniqid().'.'.$fnameext;
+        if($request->hasFile('image')){
+            $fnameext = $file->extension(); //jpg 
+            $imagenewname = uniqid().'.'.$fnameext;
 
-        //     // dd($imagenewname);
+            dd($imagenewname);
 
-        //     $file->storeAs('public/images',$imagenewname);
-        //     $product->image = $imagenewname;
-        // }
+            // $file->storeAs('images',$imagenewname);
+            // $product->image = $imagenewname;
+        }
 
-
-        // if($request->hasFile('image')){
-        //     // $fileutl = $file->store();
-        //     $fileutl = $file->store('images');
-
-        //     $product->image = $fileutl;
-        // }
-
-
-        // if($request->hasFile('image')){
-        //     $fnameext = $file->extension();
-        //     $imagename = uniqid().".".$fnameext;
-        //     Storage::disk("local")->put('images/'.$imagename,$file->get());
-
-        //     $product->image = $imagename;
-        // }
-
-
-
-        // if($request->hasFile('image')){
-        //     $fnameext = $file->extension();
-        //     $imagename = uniqid().".".$fnameext;
-        //     Storage::disk("local")->put('images/'.$imagename,$file->get(),'public');
-
-        //     $fileurl = 'public/app/images/'.$imagename;
-        //     $product->image = $fileurl;
-        // }
 
 
         $product->save();

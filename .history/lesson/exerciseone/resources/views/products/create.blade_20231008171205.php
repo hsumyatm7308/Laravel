@@ -9,7 +9,7 @@
 <!-- / is indicate to POST (store)  and not includint /   indicates to GET (index)  -->
 <!-- action="/countries" -->
 
-<form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{route('products.store')}}" method="POST" enctype="multipart/formdata">
     <!-- csrf = Cross-site request  forgery -->
   <!-- {{ csrf_field() }} -->
   <!-- <input type="hidden" name="_token" value="{{csrf_token()}}"> -->
