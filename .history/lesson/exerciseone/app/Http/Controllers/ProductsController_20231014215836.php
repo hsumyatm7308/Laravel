@@ -263,17 +263,17 @@ class ProductsController extends Controller
 
 
 
-        // if ($request->hasFile('image')) {
-        //     $fnameext = $file->extension();
-        //     $imagename = uniqid() . "." . $fnameext;
-        //     // Storage::disk("local")->put('public/images/'.$imagename,$file->get(),'public');
-        //     Storage::disk("local")->put('public/images/' . $imagename, file_get_contents($file), 'public');
+        if ($request->hasFile('image')) {
+            $fnameext = $file->extension();
+            $imagename = uniqid() . "." . $fnameext;
+            // Storage::disk("local")->put('public/images/'.$imagename,$file->get(),'public');
+            Storage::disk("local")->put('public/images/' . $imagename, file_get_contents($file), 'public');
 
-        //     Storage::disk("local")->put('public/images/' . $imagename, File::get($file), 'public');
+            Storage::disk("local")->put('public/images/' . $imagename, File::get($file), 'public');
 
-        //     $fileurl = 'public/app/images/' . $imagename;
-        //     $product->image = $fileurl;
-        // }
+            $fileurl = 'public/app/images/' . $imagename;
+            $product->image = $fileurl;
+        }
 
 
         $product->save();

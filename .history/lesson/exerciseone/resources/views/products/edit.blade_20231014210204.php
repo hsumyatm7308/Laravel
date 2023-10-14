@@ -58,7 +58,6 @@
 </form>
 
 @endsection 
-@section('footer')
 
 @section('script')
 

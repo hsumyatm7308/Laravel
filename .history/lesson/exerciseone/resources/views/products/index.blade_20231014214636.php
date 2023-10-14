@@ -40,8 +40,6 @@
 
             <img src="{{ asset('storage/images/'.$product->image) }}" class="rounded" style="width: 50px; height: 50px" alt="{{ $product->image }}">
             <img src="{{ asset('storage/'.$product->image) }}" class="rounded" style="width: 50px; height: 50px" alt="{{ $product->image }}">
-            <img src="{{ asset('storage/'.$product->image) }}" class="rounded" style="width: 50px; height: 50px" alt="{{ $product->image }}">
-            <img src="{{ asset('images/'.$product->image) }}" class="rounded" style="width: 50px; height: 50px" alt="{{ $product->image }}">
 
 
             {{$product->image}}

@@ -60,20 +60,20 @@ class ProductsController extends Controller
 
         $file = $request->file('image');
 
-        if ($file) {
-            $fname = $file->getClientOriginalName();
+        // if ($file) {
+        //     $fname = $file->getClientOriginalName();
 
-            // $imagenewname = date('ymdHis') . $fname;
-            // $imagenewname = time() . $fname;
-            $imagenewname = uniqid().$fname;
-
-
-            // dd($imagenewname);
-            $file->move('images',$imagenewname);
-            $product->image = $imagenewname;
+        //     // $imagenewname = date('ymdHis') . $fname;
+        //     // $imagenewname = time() . $fname;
+        //     $imagenewname = uniqid().$fname;
 
 
-        }
+        //     // dd($imagenewname);
+        //     $file->move('images',$imagenewname);
+        //     $product->image = $imagenewname;
+
+
+        // }
 
 
         // if ($file) {
@@ -196,7 +196,7 @@ class ProductsController extends Controller
         }
 
 
-            // delete old file update new file (for Storage)
+            // delete old file update new file (for publlic)
             if ($request->hasFile('image')) {
                 $path = public_path('app/public/images/') . $product->image;
     
@@ -263,17 +263,17 @@ class ProductsController extends Controller
 
 
 
-        // if ($request->hasFile('image')) {
-        //     $fnameext = $file->extension();
-        //     $imagename = uniqid() . "." . $fnameext;
-        //     // Storage::disk("local")->put('public/images/'.$imagename,$file->get(),'public');
-        //     Storage::disk("local")->put('public/images/' . $imagename, file_get_contents($file), 'public');
+        if ($request->hasFile('image')) {
+            $fnameext = $file->extension();
+            $imagename = uniqid() . "." . $fnameext;
+            // Storage::disk("local")->put('public/images/'.$imagename,$file->get(),'public');
+            Storage::disk("local")->put('public/images/' . $imagename, file_get_contents($file), 'public');
 
-        //     Storage::disk("local")->put('public/images/' . $imagename, File::get($file), 'public');
+            Storage::disk("local")->put('public/images/' . $imagename, File::get($file), 'public');
 
-        //     $fileurl = 'public/app/images/' . $imagename;
-        //     $product->image = $fileurl;
-        // }
+            $fileurl = 'public/app/images/' . $imagename;
+            $product->image = $fileurl;
+        }
 
 
         $product->save();

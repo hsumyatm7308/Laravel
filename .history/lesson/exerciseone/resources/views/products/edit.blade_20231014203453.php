@@ -3,6 +3,7 @@
 @section('title','Create Page')
 @section('content')
 
+@section('footer')
 
 
 <h1>Edit Page</h1>
@@ -57,13 +58,3 @@
     </div>
 </form>
 
-@endsection 
-@section('footer')
-
-@section('script')
-
-<script type="text/javascript">
-    
-</script>
-
-@endsection 

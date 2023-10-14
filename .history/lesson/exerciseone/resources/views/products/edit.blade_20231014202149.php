@@ -3,6 +3,7 @@
 @section('title','Create Page')
 @section('content')
 
+@section('footer')
 
 
 <h1>Edit Page</h1>
@@ -17,31 +18,21 @@
 
 
     <div class="col-md-6 form-group mb-3">
-        <img src="{{ asset('images/'.$products->image)}}" alt="">
-    </div>
-
-
-    <div class="col-md-6 form-group mb-3">
         <label for="name">Product Name</label>
         <input type="text" name="name" class="form-control form-control-sm rounded-0" value="{{$products->name}}">
     </div>
 
     <div class="col-md-6 form-group mb-3">
         <label for="price">Price</label>
-        <input type="text" name="price" class="form-control form-control-sm rounded-0" value="{{$products->price}}">
+        <input type="text" name="price" class="form-control form-control-sm rounded-0" value="{{$product->price}}">
     </div>
 
     <div class="col-md-6 form-group mb-3">
         <label for="image">Image</label>
-        <input type="file" name="image" class="form-control form-control-sm rounded-0" value="{{$products->image}}">
+        <input type="file" name="image" class="form-control form-control-sm rounded-0" value="{{$product->image}}">
 
     </div>
 
-
-    <div class="col-md-12">
-        <div class="gallery"><span>Choose</span></div>
-
-    </div>
  
    
 
@@ -57,13 +48,3 @@
     </div>
 </form>
 
-@endsection 
-@section('footer')
-
-@section('script')
-
-<script type="text/javascript">
-    
-</script>
-
-@endsection 

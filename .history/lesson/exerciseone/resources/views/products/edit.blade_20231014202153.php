@@ -3,6 +3,7 @@
 @section('title','Create Page')
 @section('content')
 
+@section('footer')
 
 
 <h1>Edit Page</h1>
@@ -14,11 +15,6 @@
   @method('PATCH')
 
     <div class="row">
-
-
-    <div class="col-md-6 form-group mb-3">
-        <img src="{{ asset('images/'.$products->image)}}" alt="">
-    </div>
 
 
     <div class="col-md-6 form-group mb-3">
@@ -37,11 +33,6 @@
 
     </div>
 
-
-    <div class="col-md-12">
-        <div class="gallery"><span>Choose</span></div>
-
-    </div>
  
    
 
@@ -57,13 +48,3 @@
     </div>
 </form>
 
-@endsection 
-@section('footer')
-
-@section('script')
-
-<script type="text/javascript">
-    
-</script>
-
-@endsection 

@@ -60,20 +60,20 @@ class ProductsController extends Controller
 
         $file = $request->file('image');
 
-        if ($file) {
-            $fname = $file->getClientOriginalName();
+        // if ($file) {
+        //     $fname = $file->getClientOriginalName();
 
-            // $imagenewname = date('ymdHis') . $fname;
-            // $imagenewname = time() . $fname;
-            $imagenewname = uniqid().$fname;
-
-
-            // dd($imagenewname);
-            $file->move('images',$imagenewname);
-            $product->image = $imagenewname;
+        //     // $imagenewname = date('ymdHis') . $fname;
+        //     // $imagenewname = time() . $fname;
+        //     $imagenewname = uniqid().$fname;
 
 
-        }
+        //     // dd($imagenewname);
+        //     $file->move('images',$imagenewname);
+        //     $product->image = $imagenewname;
+
+
+        // }
 
 
         // if ($file) {
@@ -179,64 +179,48 @@ class ProductsController extends Controller
         //
 
 
-        $product = Product::findOrFail($id);
+        Product::findOrFail($id)->update([
+            'name' => $request['name'],
+            'price' => $request['price']
+        ]);
 
+
+        $product = new Product();
         $product->name = $request['name'];
         $product->price = $request['price'];
 
 
-        // delete old file update new file (for publlic)
-        if ($request->hasFile('image')) {
-            $path = public_path('images/') . $product->image;
-
-            if (File::exists($path)) {
-
-                File::delete($path);
-            }
-        }
-
-
-            // delete old file update new file (for Storage)
-            if ($request->hasFile('image')) {
-                $path = public_path('app/public/images/') . $product->image;
-    
-                if (File::exists($path)) {
-    
-                    File::delete($path);
-                }
-            }
-    
-
-
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-
-            $fname = $file->getClientOriginalName();
-
-            // $imagenewname = date('ymdHis') . $fname;
-            // $imagenewname = time() . $fname;
-            $imagenewname = uniqid() . $fname;
-
-
-            // dd($imagenewname);
-            $filerul = $file->move(public_path('images'), $imagenewname);
-            $product->image = $filerul;
-
-
-        }
-
+       
 
         // if ($request->hasFile('image')) {
         //     $file = $request->file('image');
 
-        //     $fnameext = $file->getClientOriginalExtension(); //jpg 
-        //     $imagenewname = uniqid() . '.' . $fnameext;
+        //     $fname = $file->getClientOriginalName();
+
+        //     // $imagenewname = date('ymdHis') . $fname;
+        //     // $imagenewname = time() . $fname;
+        //     $imagenewname = uniqid() . $fname;
+
 
         //     // dd($imagenewname);
+        //     $filerul = $file->move(public_path('images'), $imagenewname);
+        //     $product->image = $filerul;
 
-        //     $file->storeAs('public/images', $imagenewname);
-        //     $product->image = $imagenewname;
+
         // }
+
+
+        if($request->hasFile('image')){
+            $file = $request->file('image');
+
+            $fnameext = $file->getClientOriginalExtension(); //jpg 
+            $imagenewname = uniqid().'.'.$fnameext;
+
+            // dd($imagenewname);
+
+            $file->storeAs('public/images',$imagenewname);
+            $product->image = $imagenewname;
+        }
 
 
 
@@ -263,17 +247,15 @@ class ProductsController extends Controller
 
 
 
-        // if ($request->hasFile('image')) {
-        //     $fnameext = $file->extension();
-        //     $imagename = uniqid() . "." . $fnameext;
-        //     // Storage::disk("local")->put('public/images/'.$imagename,$file->get(),'public');
-        //     Storage::disk("local")->put('public/images/' . $imagename, file_get_contents($file), 'public');
+        if($request->hasFile('image')){
+            $fnameext = $file->extension();
+            $imagename = uniqid().".".$fnameext;
+            // Storage::disk("local")->put('public/images/'.$imagename,$file->get(),'public');
+            Storage::disk("local")->put('public/images/'.$imagename,$file->get(),'public');
 
-        //     Storage::disk("local")->put('public/images/' . $imagename, File::get($file), 'public');
-
-        //     $fileurl = 'public/app/images/' . $imagename;
-        //     $product->image = $fileurl;
-        // }
+            $fileurl = 'public/app/images/'.$imagename;
+            $product->image = $fileurl;
+        }
 
 
         $product->save();
