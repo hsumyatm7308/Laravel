@@ -46,10 +46,7 @@ class ProductsController extends Controller
             'image'=>'required|image|mimes:jpeg,svg,jpg,icon|max:3072'
 
 
-            // 'status' => 'required|in:active,inactive'
-            // 'public_at' => 'nullable|date' 
-                                                        //size
-            // 'title'=>'requred|unique:articles,title|max:100'
+            // 'status'
         ]);
         // mimes =>  multi purpose inter mail extention
 

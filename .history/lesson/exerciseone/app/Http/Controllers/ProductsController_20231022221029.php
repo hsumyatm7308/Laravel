@@ -49,7 +49,7 @@ class ProductsController extends Controller
             // 'status' => 'required|in:active,inactive'
             // 'public_at' => 'nullable|date' 
                                                         //size
-            // 'title'=>'requred|unique:articles,title|max:100'
+            'title'=>'requred|unique:articles,title|max:100'
         ]);
         // mimes =>  multi purpose inter mail extention
 

@@ -39,21 +39,6 @@ class ProductsController extends Controller
     {
 
 
-        $this->validate($request,[     
-                                      //table,column name
-            'name' => 'required|unique:products,name',
-            'price'=>'required|numberic',
-            'image'=>'required|image|mimes:jpeg,svg,jpg,icon|max:3072'
-
-
-            // 'status' => 'required|in:active,inactive'
-            // 'public_at' => 'nullable|date' 
-                                                        //size
-            // 'title'=>'requred|unique:articles,title|max:100'
-        ]);
-        // mimes =>  multi purpose inter mail extention
-
-
         //    1. Public Folder (public/customfolder/)
         // $request->image->move('customfolder',$imagename);
         // $request->image->move(public_path('path'),$imagename);
