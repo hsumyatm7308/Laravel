@@ -114,7 +114,7 @@ DB:table()->get();
 
     29TZ 
 
-    ---------------------------------------------
+---------------------------------------------
 
         //    1. Public Folder (public/customfolder/)
         // $request->image->move('customfolder',$imagename);
@@ -130,3 +130,8 @@ DB:table()->get();
 
 
         // $request->image->storeAs($customfolder,$imagename,optional drive)
+
+
+-------------------------
+
+=>After Login or Register (Redirect )

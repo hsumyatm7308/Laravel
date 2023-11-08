@@ -130,3 +130,9 @@ DB:table()->get();
 
 
         // $request->image->storeAs($customfolder,$imagename,optional drive)
+
+
+-------------------------
+
+=>After Login or Register (Redirect )
+App > Provider > RouteServiceProviter  > public const HOME = '/dashboards';
