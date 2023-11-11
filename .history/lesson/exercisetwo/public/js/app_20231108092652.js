@@ -23,69 +23,7 @@ function dropbtn(e){
 // end dropdown
 /* end notify & userlogout  */
 
-
-
-
-//  Start Gauge Area 
-
-var gaugeurs = new JustGage({
-  id: "gaugeusers", // the id of the html element
-  width:200,
-  height:200,
-  value: 50,
-  min: 0,
-  max: 70,
-  gaugeWidthScale: 0.6
-});
-
-var gaugecus = new JustGage({
-  id: "gaugecustomers", // the id of the html element
-  width:200,
-  height:200,
-  value: 50,
-  min: 0,
-  max: 70,
-  gaugeWidthScale: 0.6
-});
-
-var gaugeemps = new JustGage({
-  id: "gaugeemployees", // the id of the html element
-  width:200,
-  height:200,
-  value: 50,
-  min: 0,
-  max: 70,
-  gaugeWidthScale: 0.6
-});
-
-var gaugeinvs = new JustGage({
-  id: "gaugeinvesters", // the id of the html element
-  width:200,
-  height:200,
-  value: 50,
-  min: 0,
-  max: 70,
-  gaugeWidthScale: 0.6
-});
-
-// update the value randomly
-setInterval(() => {
-  gaugeurs.refresh(Math.random() * 100);
-  gaugecus.refresh(Math.random() * 100);
-  gaugeemps.refresh(Math.random() * 100);
-  gaugeinvs.refresh(Math.random() * 100);
-}, 5000)
-
-
-//  End Gauge Area 
-
-
-
 /* End Top Navbar  */
-
-
-
-
 
 // Start Expense Area
 const ctx = document.getElementById("mypiechart");

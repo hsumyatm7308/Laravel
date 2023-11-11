@@ -466,45 +466,41 @@
 							</div>
 						</div>
 
-
                         <div class='col-lg-3 col-md-6 mb-2'>
 							<div class='card shadow py-2 border-left-successes'>
 								<div class='card-body'>
 
-								<div class='row justify-content-center align-items-center'>
-									<div class=""> 
-                                    <div class='col d-flex justify-content-between'>
-											<h5 class='text-xs fw-bold text-primary text-uppercase mb-1'>Customers</h5>
-											<p class='h5 text-muted mb-0'>700,000</p>
+									<div class='row justify-content-center align-items-center'>
+										<div class='col d-flex justify-content-between'>
+											<h5 class='text-xs fw-bold text-primary text-uppercase mb-1'>Employees</h5>
+											<p class='h5 text-muted mb-0'>80</p>
 										</div>
-										<div class='col'>
+										<div class='col-auto'>
 											<div id="gaugeemployees"></div>
 										</div>
-                                    </div>
 
-                                    
+
+                                        
 										<div class='col-auto'>
 											<i class='fas fa-clipboard-list fa-2x text-secondary'></i>
 										</div>
-								</div>
 
-
+									</div>
 								</div>
 
 
 							</div>
 						</div>
 
-                       
-
-
-						<!-- <div class='col-lg-3 col-md-6 mb-2'>
+<!-- 
+						<div class='col-lg-3 col-md-6 mb-2'>
 							<div class='card shadow py-2 border-left-infos'>
 								<div class='card-body'>
 
 									<div class='row justify-content-center align-items-center'>
 										<div class='col d-flex justify-content-between'>
-											<h5 class='text-xs fw-bold text-primary text-uppercase mb-1'>Employees</h5>
+											<h6 class='text-xs fw-bold text-primary text-uppercase mb-1'>Employees
+											</h6>
 											<div class='row'>
 												<div class='col-auto'>
 													<p class='h5 text-muted mb-0'>80</p>

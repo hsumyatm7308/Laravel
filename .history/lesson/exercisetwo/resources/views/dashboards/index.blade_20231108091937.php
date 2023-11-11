@@ -90,467 +90,315 @@
                 </div>
                 <!--End Shortcut Area-->
 
-                	<!-- Start Carousel Area  -->
 
-					<div class="row">
-						<div class="col-sm-6 col-md-3 mb-2">
-							<div class="card">
-								<div class="card-body">
-									<div>
-										<h6 class="cart-title">Sales</h6>
-									</div>
-									<div id="sales" class="carousel slide" data-bs-ride="carousel">
-										<div class="carousel-inner">
 
-											<div class="carousel-item active">
-
-												<div class="d-flex ">
-													<h3 class="me-3">$ 58,664</h3>
-													<h5 class="text-danger">+3.2%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Revenue <span
-															class="text-muted">($1572M last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-											<div class="carousel-item">
-
-												<div class="d-flex">
-													<h3 class="me-3">$ 8,664</h3>
-													<h5 class="text-danger">+2.3%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Profit<span class="text-muted">($1572M
-															last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-
-											<div class="carousel-item">
-
-												<div class="d-flex">
-													<h3 class="me-3">$ 664</h3>
-													<h5 class="text-danger">+5.2%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Net Amount<span
-															class="text-muted">($1772M last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-										</div>
-
-										<button type="button" class="carousel-control-prev" data-bs-target="#sales"
-											data-bs-slide="prev">
-											<span class="carousel-control-prev-icon"></span>
-										</button>
-
-										<button type="button" class="carousel-control-next" data-bs-target="#sales"
-											data-bs-slide="next">
-											<span class="carousel-control-next-icon"></span>
-										</button>
-
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-md-3 mb-2">
-							<div class="card">
-								<div class="card-body">
-									<div>
-										<h6 class="cart-title">Purchase</h6>
-									</div>
-									<div id="purchase" class="carousel slide" data-bs-ride="carousel">
-										<div class="carousel-inner">
-
-											<div class="carousel-item active">
-
-												<div class="d-flex ">
-													<h3 class="me-3">$ 278,632</h3>
-													<h5 class="text-danger">+1.2%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Preorder <span
-															class="text-muted">($2172M last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-											<div class="carousel-item">
-
-												<div class="d-flex">
-													<h3 class="me-3">$ 614</h3>
-													<h5 class="text-danger">+2.3%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Fixorder<span
-															class="text-muted">($2772M
-															last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-
-											<div class="carousel-item">
-
-												<div class="d-flex">
-													<h3 class="me-3">$ 614</h3>
-													<h5 class="text-danger">+5.2%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Netorder<span
-															class="text-muted">($272M last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-										</div>
-
-										<button type="button" class="carousel-control-prev" data-bs-target="#purchase"
-											data-bs-slide="prev">
-											<span class="carousel-control-prev-icon"></span>
-										</button>
-
-										<button type="button" class="carousel-control-next" data-bs-target="#purchase"
-											data-bs-slide="next">
-											<span class="carousel-control-next-icon"></span>
-										</button>
-
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="col-sm-6 col-md-3 mb-2">
-							<div class="card">
-								<div class="card-body">
-									<div>
-										<h6 class="cart-title">Return</h6>
-									</div>
-									<div id="return" class="carousel slide" data-bs-ride="carousel">
-										<div class="carousel-inner">
-
-											<div class="carousel-item active">
-
-												<div class="d-flex ">
-													<h3 class="me-3">$ 11,664</h3>
-													<h5 class="text-danger">+1.0%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Expire <span class="text-muted">($2M
-															last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-											<div class="carousel-item">
-
-												<div class="d-flex">
-													<h3 class="me-3">$ 9,144</h3>
-													<h5 class="text-danger">+2.3%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Damage<span class="text-muted">($72M
-															last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-
-											<div class="carousel-item">
-
-												<div class="d-flex">
-													<h3 class="me-3">$ 1,5664</h3>
-													<h5 class="text-danger">+8.2%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Net Return<span
-															class="text-muted">($2M last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-										</div>
-
-										<button type="button" class="carousel-control-prev" data-bs-target="#return"
-											data-bs-slide="prev">
-											<span class="carousel-control-prev-icon"></span>
-										</button>
-
-										<button type="button" class="carousel-control-next" data-bs-target="#return"
-											data-bs-slide="next">
-											<span class="carousel-control-next-icon"></span>
-										</button>
-
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="col-sm-6 col-md-3 mb-2">
-							<div class="card">
-								<div class="card-body">
-									<div>
-										<h6 class="cart-title">Marketing</h6>
-									</div>
-									<div id="marketing" class="carousel slide" data-bs-ride="carousel">
-										<div class="carousel-inner">
-
-											<div class="carousel-item active">
-
-												<div class="d-flex ">
-													<h3 class="me-3">$ 2,664</h3>
-													<h5 class="text-danger">+1.2%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">company <span class="text-muted">($72M
-															last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-											<div class="carousel-item">
-
-												<div class="d-flex">
-													<h3 class="me-3">$ 75,664</h3>
-													<h5 class="text-danger">+5.3%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Outlet<span class="text-muted">($172M
-															last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-
-											<div class="carousel-item">
-
-												<div class="d-flex">
-													<h3 class="me-3">$ 15,664</h3>
-													<h5 class="text-danger">+7.2%</h5>
-												</div>
-
-												<div class="mb-3">
-													<p class="fw-bold text-small">Workshop<span
-															class="text-muted">($192M last month)</span></p>
-												</div>
-												<button
-													class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-													<i class="fas fa-calendar-alt me-1"></i>
-													<span>June</span>
-												</button>
-											</div>
-
-										</div>
-
-										<button type="button" class="carousel-control-prev" data-bs-target="#marketing"
-											data-bs-slide="prev">
-											<span class="carousel-control-prev-icon"></span>
-										</button>
-
-										<button type="button" class="carousel-control-next" data-bs-target="#marketing"
-											data-bs-slide="next">
-											<span class="carousel-control-next-icon"></span>
-										</button>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<!-- End Carousel Area  -->
-
-
-					<!-- Start gauge Area -->
-					<div class='row pt-md-5 mt-md-3'>
-
-						<div class='col-lg-3 col-md-6 mb-2'>
-							<div class='card shadow py-2 border-left-primarys'>
-								<div class='card-body'>
-
-									<div class='row justify-content-center align-items-center'>
-										<div class='col d-flex justify-content-between'>
-											<h6 class='text-xs fw-bold text-primary text-uppercase mb-1'>Users</h6>
-												<p class='h5 text-muted mb-0'>50</p>
-										</div>
-										<div class='col-auto'>
-											<div id="gaugeusers"></div>
-										</div>
-									</div>
-								</div>
-
-
-							</div>
-						</div>
-
-						<div class='col-lg-3 col-md-6 mb-2'>
-							<div class='card shadow py-2 border-left-successes'>
-								<div class='card-body'>
-
-									<div class='row justify-content-center align-items-center'>
-										<div class='col d-flex justify-content-between'>
-											<h5 class='text-xs fw-bold text-primary text-uppercase mb-1'>Customers</h5>
-											<p class='h5 text-muted mb-0'>700,000</p>
-										</div>
-										<div class='col-auto'>
-											<div id="gaugecustomers"></div>
-										</div>
-									</div>
-								</div>
-
-
-							</div>
-						</div>
-
-
-                        <div class='col-lg-3 col-md-6 mb-2'>
-							<div class='card shadow py-2 border-left-successes'>
-								<div class='card-body'>
-
-								<div class='row justify-content-center align-items-center'>
-									<div class=""> 
-                                    <div class='col d-flex justify-content-between'>
-											<h5 class='text-xs fw-bold text-primary text-uppercase mb-1'>Customers</h5>
-											<p class='h5 text-muted mb-0'>700,000</p>
-										</div>
-										<div class='col'>
-											<div id="gaugeemployees"></div>
-										</div>
+ 
+                <div class="row">
+                    <div class="col-lg-10 col-md-9 ms-auto">
+
+                        <div class="row pt-5">
+
+                            <div class="col-lg-3 col-sm-6 mb-2">
+                                <div class="card rounded-0 cardboxs">
+                                    <div class="card-body">
+                                       <div class="d-flex justify-content-between">
+                                        <i class="fas fa-users fa-2x text-primary"></i>
+                                        <div class="text-secondary text-end">
+                                            <h5>Customers</h5>
+                                            <h3>35,250</h3>
+                                        </div>
+                                       </div>
                                     </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fas fa-sync me-3"></i>
+                                        <span>Update</span>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="col-lg-3 col-sm-6 mb-2">
+                                <div class="card rounded-0 cardboxs">
+                                    <div class="card-body">
+                                       <div class="d-flex justify-content-between">
+                                        <i class="fas fa-shopping-cart fa-2x text-success"></i>
+                                        <div class="text-secondary text-end">
+                                            <h5>Orders</h5>
+                                            <h3>75,25</h3>
+                                        </div>
+                                       </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fas fa-sync me-3"></i>
+                                        <span>Update</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 mb-2">
+                                <div class="card rounded-0 cardboxs">
+                                    <div class="card-body">
+                                       <div class="d-flex justify-content-between">
+                                        <i class="fas fa-money-bill-alt fa-2x text-danger"></i>
+                                        <div class="text-secondary text-end">
+                                            <h5>Revenue</h5>
+                                            <h3>$580,000</h3>
+                                        </div>
+                                       </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fas fa-sync me-3"></i>
+                                        <span>Update</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 mb-2">
+                                <div class="card rounded-0 cardboxs">
+                                    <div class="card-body">
+                                       <div class="d-flex justify-content-between">
+                                        <i class="fas fa-chart-line fa-2x text-info"></i>
+                                        <div class="text-secondary text-end">
+                                            <h5>Growth</h5>
+                                            <h3>+ 40.78%</h3>
+                                        </div>
+                                       </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fas fa-sync me-3"></i>
+                                        <span>Update</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                           <div class="container-fluid">
+                            <div class="row">
+
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="col-sm-12 mb-2">
+                                        <div class="card rounded-0 cardboxs">
+                                            <div class="card-body">
+                                               <div class="d-flex justify-content-between">
+                                                <i class="fas fa-eye fa-2x text-secondary"></i>
+                                                <div class="text-secondary text-end">
+                                                    <h5>Page Views</h5>
+                                                    <h3>37,543</h3>
+                                                </div>
+                                               </div>
+                                            </div>
+                                            <div class="card-footer text-secondary">
+                                                <i class="fas fa-sync me-3"></i>
+                                                <span>Update</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mb-2">
+                                        <div class="card rounded-0 cardboxs">
+                                            <div class="card-body">
+                                               <div class="d-flex justify-content-between">
+                                                <i class="fas fa-clock fa-2x text-dark"></i>
+                                                <div class="text-secondary text-end">
+                                                    <h5>Avg . Time</h5>
+                                                    <h3>258 hs</h3>
+                                                </div>
+                                               </div>
+                                            </div>
+                                            <div class="card-footer text-secondary">
+                                                <i class="fas fa-sync me-3"></i>
+                                                <span>Update</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End col-4-->
+
+                                <div class="col-md-8">
+                                   
+                                        <div class="card rounded-0 cardboxs">
+                                            <div class="card-body">
+                                               <div id="viewerreport"></div>
+                                            </div>
+                                            <div class="card-footer text-secondary">
+                                                <i class="fas fa-sync me-3"></i>
+                                                <span>Update</span>
+                                            </div>
+                                        </div>
                                     
-										<div class='col-auto'>
-											<i class='fas fa-clipboard-list fa-2x text-secondary'></i>
-										</div>
-								</div>
+                                </div>
 
+                            </div>
+                           </div>
 
-								</div>
+                        </div>
 
+                    </div>
+                </div>
 
-							</div>
-						</div>
+	<!-- End Pannel Section -->
 
-                       
+	<!-- Start User Permission -->
 
+			<div class="row">
+				<div class="col-lg-10 col-md-9 ms-auto">
+					<div class="row">
+						<div class="col-xl-6 col-12 ">
+							<h5 class="text-muted">User Permission:</h5>
 
-						<!-- <div class='col-lg-3 col-md-6 mb-2'>
-							<div class='card shadow py-2 border-left-infos'>
-								<div class='card-body'>
-
-									<div class='row justify-content-center align-items-center'>
-										<div class='col d-flex justify-content-between'>
-											<h5 class='text-xs fw-bold text-primary text-uppercase mb-1'>Employees</h5>
-											<div class='row'>
-												<div class='col-auto'>
-													<p class='h5 text-muted mb-0'>80</p>
-												</div>
-												<div class='col'>
-													<div id="gaugeemployees"></div>
-												</div>
-											</div>
-										</div>
-
-
-
-										<div class='col-auto'>
-											<i class='fas fa-clipboard-list fa-2x text-secondary'></i>
-										</div>
+							<div class="container-fluid bg-white borderends">
+								<div class="row align-items-center p-3 mb-2">
+									<div class="col-1">
+										<i class="fas fa-lock-open fa-lg text-success"></i>
+									</div>
+									<div class="col-md-9 col-8">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									</div>
+									<div class="col-1 form-switch">
+										<input type="checkbox" name="check1" id="check1" class="form-check-input" checked>
 									</div>
 								</div>
-
-
 							</div>
-						</div> -->
 
-						<div class='col-lg-3 col-md-6 mb-2'>
-							<div class='card shadow py-2 border-left-warnings'>
-								<div class='card-body'>
-
-									<div class='row justify-content-center align-items-center'>
-										<div class='col d-flex justify-content-between'>
-											<h6 class='text-xs fw-bold text-primary text-uppercase mb-1'>Invester
-											</h6>
-											<p class='h5 text-muted mb-0'>40</p>
-										</div>
-										<div class='col-auto'>
-											<div id="gaugeinvesters"></div>
-										</div>
+							<div class="container-fluid bg-white borderends">
+								<div class="row align-items-center p-3 mb-2">
+									<div class="col-1">
+										<i class="fas fa-lock-open fa-lg text-success"></i>
+									</div>
+									<div class="col-md-9 col-8">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									</div>
+									<div class="col-1 form-switch">
+										<input type="checkbox" name="check2" id="check2" class="form-check-input" checked>
 									</div>
 								</div>
-
-
 							</div>
+
+							<div class="container-fluid bg-white borderends">
+								<div class="row align-items-center p-3 mb-2">
+									<div class="col-1">
+										<i class="fas fa-lock-open fa-lg text-success"></i>
+									</div>
+									<div class="col-md-9 col-8">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									</div>
+									<div class="col-1 form-switch">
+										<input type="checkbox" name="check3" id="check3" class="form-check-input" checked>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-fluid bg-white borderends">
+								<div class="row align-items-center p-3 mb-2">
+									<div class="col-1">
+										<i class="fas fa-lock-open fa-lg text-success"></i>
+									</div>
+									<div class="col-md-9 col-8">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									</div>
+									<div class="col-1 form-switch">
+										<input type="checkbox" name="check4" id="check4" class="form-check-input" checked>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-fluid bg-white borderends">
+								<div class="row align-items-center p-3 mb-2">
+									<div class="col-1">
+										<i class="fas fa-lock-open fa-lg text-success"></i>
+									</div>
+									<div class="col-md-9 col-8">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									</div>
+									<div class="col-1 form-switch">
+										<input type="checkbox" name="check5" id="check5" class="form-check-input" checked>
+									</div>
+								</div>
+							</div>
+
 						</div>
+						<div class="col-xl-6 col-12 ">
+							<h5 class="text-muted mb-3
+							">Inventory</h5>
+							<table class="table table-secondary table-hover text-center">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Item</th>
+										<th>Price</th>
+										<th>Qty</th>
+										<th>Status</th>
+										<th>Edit</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1001</td>
+										<td>Monitor</td>
+										<td>$ 50</td>
+										<td>200</td>
+										<td><span class="badge bg-success py-2">In</span></td>
+										<td><i class="fas fa-edit text-primary"></i></td>
+									</tr>
+									<tr>
+										<td>1002</td>
+										<td>Mouse</td>
+										<td>$ 30</td>
+										<td>1000</td>
+										<td><span class="badge bg-success py-2">In</span></td>
+										<td><i class="fas fa-edit text-primary"></i></td>
+									</tr>
+									<tr>
+										<td>1003</td>
+										<td>DVD</td>
+										<td>$ 10</td>
+										<td>0</td>
+										<td><span class="badge bg-danger py-2">Out</span></td>
+										<td><i class="fas fa-edit text-primary"></i></td>
+									</tr>
+									<tr>
+										<td>1004</td>
+										<td>Speaker</td>
+										<td>$ 50</td>
+										<td>1000</td>
+										<td><span class="badge bg-success py-2">In</span></td>
+										<td><i class="fas fa-edit text-primary"></i></td>
+									</tr>
+									<tr>
+										<td>1005</td>
+										<td>Ram</td>
+										<td>$ 90</td>
+										<td>1000</td>
+										<td><span class="badge bg-success py-2">In</span></td>
+										<td><i class="fas fa-edit text-primary"></i></td>
+									</tr>
+									<tr>
+										<td>1006</td>
+										<td>Keyboard</td>
+										<td>$ 40</td>
+										<td>0</td>
+										<td><span class="badge bg-danger py-2">Out</span></td>
+										<td><i class="fas fa-edit text-primary"></i></td>
+									</tr>
+								</tbody>
+							</table>
 
+							<!-- start paganation -->
+							<nav>
+								<ul class="pagination pagination-sm justify-content-center">
+									<li class="page-item"><a href="javascript:void(0);" class="page-link px-3 py-2"><span>Previous</span></a></li>
+									<li class="page-item active"><a href="javascript:void(0);" class="page-link px-3 py-2"><span>1</span></a></li>
+									<li class="page-item"><a href="javascript:void(0);" class="page-link px-3 py-2"><span>2</span></a></li>
+									<li class="page-item"><a href="javascript:void(0);" class="page-link px-3 py-2"><span>3</span></a></li>
+									<li class="page-item"><a href="javascript:void(0);" class="page-link px-3 py-2"><span>Next</span></a></li>
 
+								</ul>
+							</nav>
+							<!-- end paganation -->
+						</div>
 					</div>
-					<!-- End gauge Area -->
-
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End User Permission -->
 
 
 
@@ -1051,13 +899,6 @@
                 <!--End Ttodo list Area-->
                 </div>
 </div>
-
-
-
-
-
-
-
 
 
 @endsection

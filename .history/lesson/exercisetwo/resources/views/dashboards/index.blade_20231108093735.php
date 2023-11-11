@@ -472,12 +472,12 @@
 								<div class='card-body'>
 
 								<div class='row justify-content-center align-items-center'>
-									<div class=""> 
+									<div class="d-flex justify-between"> 
                                     <div class='col d-flex justify-content-between'>
 											<h5 class='text-xs fw-bold text-primary text-uppercase mb-1'>Customers</h5>
 											<p class='h5 text-muted mb-0'>700,000</p>
 										</div>
-										<div class='col'>
+										<div class='col-auto'>
 											<div id="gaugeemployees"></div>
 										</div>
                                     </div>

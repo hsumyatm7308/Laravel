@@ -23,6 +23,8 @@ function dropbtn(e){
 // end dropdown
 /* end notify & userlogout  */
 
+/* End Top Navbar  */
+
 
 
 
@@ -78,12 +80,6 @@ setInterval(() => {
 
 
 //  End Gauge Area 
-
-
-
-/* End Top Navbar  */
-
-
 
 
 

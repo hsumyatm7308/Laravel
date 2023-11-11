@@ -434,7 +434,8 @@
 
 									<div class='row justify-content-center align-items-center'>
 										<div class='col d-flex justify-content-between'>
-											<h6 class='text-xs fw-bold text-primary text-uppercase mb-1'>Users</h6>
+											<h6 class='text-xs fw-bold text-primary text-uppercase mb-1'>Users
+												</h6>
 												<p class='h5 text-muted mb-0'>50</p>
 										</div>
 										<div class='col-auto'>
@@ -467,44 +468,14 @@
 						</div>
 
 
-                        <div class='col-lg-3 col-md-6 mb-2'>
-							<div class='card shadow py-2 border-left-successes'>
-								<div class='card-body'>
-
-								<div class='row justify-content-center align-items-center'>
-									<div class=""> 
-                                    <div class='col d-flex justify-content-between'>
-											<h5 class='text-xs fw-bold text-primary text-uppercase mb-1'>Customers</h5>
-											<p class='h5 text-muted mb-0'>700,000</p>
-										</div>
-										<div class='col'>
-											<div id="gaugeemployees"></div>
-										</div>
-                                    </div>
-
-                                    
-										<div class='col-auto'>
-											<i class='fas fa-clipboard-list fa-2x text-secondary'></i>
-										</div>
-								</div>
-
-
-								</div>
-
-
-							</div>
-						</div>
-
-                       
-
-
-						<!-- <div class='col-lg-3 col-md-6 mb-2'>
+						<div class='col-lg-3 col-md-6 mb-2'>
 							<div class='card shadow py-2 border-left-infos'>
 								<div class='card-body'>
 
 									<div class='row justify-content-center align-items-center'>
 										<div class='col d-flex justify-content-between'>
-											<h5 class='text-xs fw-bold text-primary text-uppercase mb-1'>Employees</h5>
+											<h6 class='text-xs fw-bold text-primary text-uppercase mb-1'>Employees
+											</h6>
 											<div class='row'>
 												<div class='col-auto'>
 													<p class='h5 text-muted mb-0'>80</p>
@@ -525,7 +496,7 @@
 
 
 							</div>
-						</div> -->
+						</div>
 
 						<div class='col-lg-3 col-md-6 mb-2'>
 							<div class='card shadow py-2 border-left-warnings'>
@@ -1056,6 +1027,152 @@
 
 
 
+
+                <!-- Start Pannel Section -->
+                <section>
+		<div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-md-9 ms-auto">
+
+                        <div class="row pt-5">
+
+                            <div class="col-lg-3 col-sm-6 mb-2">
+                                <div class="card rounded-0 cardboxs">
+                                    <div class="card-body">
+                                       <div class="d-flex justify-content-between">
+                                        <i class="fas fa-users fa-2x text-primary"></i>
+                                        <div class="text-secondary text-end">
+                                            <h5>Customers</h5>
+                                            <h3>35,250</h3>
+                                        </div>
+                                       </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fas fa-sync me-3"></i>
+                                        <span>Update</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 mb-2">
+                                <div class="card rounded-0 cardboxs">
+                                    <div class="card-body">
+                                       <div class="d-flex justify-content-between">
+                                        <i class="fas fa-shopping-cart fa-2x text-success"></i>
+                                        <div class="text-secondary text-end">
+                                            <h5>Orders</h5>
+                                            <h3>75,25</h3>
+                                        </div>
+                                       </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fas fa-sync me-3"></i>
+                                        <span>Update</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 mb-2">
+                                <div class="card rounded-0 cardboxs">
+                                    <div class="card-body">
+                                       <div class="d-flex justify-content-between">
+                                        <i class="fas fa-money-bill-alt fa-2x text-danger"></i>
+                                        <div class="text-secondary text-end">
+                                            <h5>Revenue</h5>
+                                            <h3>$580,000</h3>
+                                        </div>
+                                       </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fas fa-sync me-3"></i>
+                                        <span>Update</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 mb-2">
+                                <div class="card rounded-0 cardboxs">
+                                    <div class="card-body">
+                                       <div class="d-flex justify-content-between">
+                                        <i class="fas fa-chart-line fa-2x text-info"></i>
+                                        <div class="text-secondary text-end">
+                                            <h5>Growth</h5>
+                                            <h3>+ 40.78%</h3>
+                                        </div>
+                                       </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fas fa-sync me-3"></i>
+                                        <span>Update</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                           <div class="container-fluid">
+                            <div class="row">
+
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="col-sm-12 mb-2">
+                                        <div class="card rounded-0 cardboxs">
+                                            <div class="card-body">
+                                               <div class="d-flex justify-content-between">
+                                                <i class="fas fa-eye fa-2x text-secondary"></i>
+                                                <div class="text-secondary text-end">
+                                                    <h5>Page Views</h5>
+                                                    <h3>37,543</h3>
+                                                </div>
+                                               </div>
+                                            </div>
+                                            <div class="card-footer text-secondary">
+                                                <i class="fas fa-sync me-3"></i>
+                                                <span>Update</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mb-2">
+                                        <div class="card rounded-0 cardboxs">
+                                            <div class="card-body">
+                                               <div class="d-flex justify-content-between">
+                                                <i class="fas fa-clock fa-2x text-dark"></i>
+                                                <div class="text-secondary text-end">
+                                                    <h5>Avg . Time</h5>
+                                                    <h3>258 hs</h3>
+                                                </div>
+                                               </div>
+                                            </div>
+                                            <div class="card-footer text-secondary">
+                                                <i class="fas fa-sync me-3"></i>
+                                                <span>Update</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End col-4-->
+
+                                <div class="col-md-8">
+                                   
+                                        <div class="card rounded-0 cardboxs">
+                                            <div class="card-body">
+                                               <div id="viewerreport"></div>
+                                            </div>
+                                            <div class="card-footer text-secondary">
+                                                <i class="fas fa-sync me-3"></i>
+                                                <span>Update</span>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+
+                            </div>
+                           </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+	</section>
+	<!-- End Pannel Section -->
 
 
 
