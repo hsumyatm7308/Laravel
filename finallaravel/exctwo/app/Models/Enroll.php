@@ -4,7 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\DB;
+=======
+>>>>>>> origin/main
 
 class Enroll extends Model
 {
@@ -20,6 +23,7 @@ class Enroll extends Model
         'remark'
     ];
 
+<<<<<<< HEAD
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -147,4 +151,14 @@ class Enroll extends Model
     }
 
 
+=======
+    public function user(){
+        return $this -> belongsTo(User::class);
+    }
+
+    public function stage(){
+        return $this -> belongsTo(Stage::class);
+    }
+
+>>>>>>> origin/main
 }

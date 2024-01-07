@@ -14,6 +14,7 @@ class CitiesController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $cities = City::where(function ($query) {
             if ($getname = request('filtername')) {
                 $query->where('city', 'LIKE', '%' . $getname . '%');
@@ -21,6 +22,10 @@ class CitiesController extends Controller
             }
         })->get();
         return view('cities.index')->with('cities', $cities);
+=======
+        $cities = City::all();
+        return view('cities.index')->with('cities',$cities);
+>>>>>>> origin/main
     }
 
     /**
@@ -37,7 +42,11 @@ class CitiesController extends Controller
     public function store(Request $request)
     {
 
+<<<<<<< HEAD
         $this->validate($request, [
+=======
+        $this -> validate($request,[
+>>>>>>> origin/main
             'regnumber' => 'required|unique:cities,regnumber',
             'remark' => "max:1000"
         ]);
@@ -46,6 +55,7 @@ class CitiesController extends Controller
         $user_id = $user['id'];
 
         $city = new City();
+<<<<<<< HEAD
 
         $city->city = $request['city'];
         $city->regnumber = $request['regnumber'];
@@ -55,6 +65,17 @@ class CitiesController extends Controller
         $city->user_id = $user_id;
 
         $city->save();
+=======
+      
+        $city -> city = $request['city'];
+        $city -> regnumber = $request['regnumber'];
+       
+        $city -> slug = Str::slug($request['regnumber']);
+        $city -> remark = $request['remark'];
+        $city -> user_id = $user_id;
+        
+        $city -> save();
+>>>>>>> origin/main
         return redirect(route('cities.index'));
 
     }
@@ -65,7 +86,11 @@ class CitiesController extends Controller
     public function show(string $id)
     {
         $city = City::findOrFail($id);
+<<<<<<< HEAD
         return view("cities.show")->with('city', $city);
+=======
+        return view("cities.show")->with('city',$city);
+>>>>>>> origin/main
     }
 
     /**
@@ -74,7 +99,11 @@ class CitiesController extends Controller
     public function edit(string $id)
     {
         $city = City::findOrFail($id);
+<<<<<<< HEAD
         return view('cities.edit')->with('city', $city);
+=======
+        return view('cities.edit')->with('city',$city);
+>>>>>>> origin/main
     }
 
     /**
@@ -82,8 +111,13 @@ class CitiesController extends Controller
      */
     public function update(Request $request, string $id)
     {
+<<<<<<< HEAD
         $this->validate($request, [
             'regnumber' => 'required|unique:cities,regnumber,' . $id,
+=======
+        $this -> validate($request,[
+            'regnumber' => 'required|unique:cities,regnumber,'.$id,
+>>>>>>> origin/main
             'remark' => 'max:1000'
         ]);
 
@@ -91,6 +125,7 @@ class CitiesController extends Controller
         $user_id = $user['id'];
 
         $city = City::findOrFail($id);
+<<<<<<< HEAD
 
         $city->city = $request['city'];
         $city->regnumber = $request['regnumber'];
@@ -100,6 +135,17 @@ class CitiesController extends Controller
         $city->user_id = $user_id;
 
         $city->save();
+=======
+      
+        $city -> city = $request['city'];
+        $city -> regnumber = $request['regnumber'];
+       
+        $city -> slug = Str::slug($request['regnumber']);
+        $city -> remark = $request['remark'];
+        $city -> user_id = $user_id;
+        
+        $city -> save();
+>>>>>>> origin/main
         return redirect(route('cities.index'));
     }
 
@@ -109,7 +155,11 @@ class CitiesController extends Controller
     public function destroy(string $id)
     {
         $city = City::findOrFail($id);
+<<<<<<< HEAD
         $city->delete();
+=======
+        $city -> delete();
+>>>>>>> origin/main
         return redirect()->back();
     }
 }

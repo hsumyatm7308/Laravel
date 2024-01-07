@@ -18,6 +18,7 @@ class Stage extends Model
         'user_id'
     ];
 
+<<<<<<< HEAD
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -33,4 +34,14 @@ class Stage extends Model
     {
         return $this->hasMany(Enroll::class);
     }
+=======
+    public function user(){
+        return $this -> belongsTo(User::class);
+    }
+
+    public function status(){
+        return $this -> belongsTo(Status::class);
+    }
+
+>>>>>>> origin/main
 }

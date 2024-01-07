@@ -10,6 +10,7 @@
     <hr/>
 
 
+<<<<<<< HEAD
 
     <div class="col-md-12">
         <form action="" method="">
@@ -30,6 +31,8 @@
 
 
 
+=======
+>>>>>>> origin/main
     <table id="mytable" class="mydata table table-warning table-hover border">
     <thead>
         <tr>
@@ -86,6 +89,7 @@
 @section('script')
 
 <script type="text/javascript">
+<<<<<<< HEAD
 
 //   Start Filter 
   const getfilterbtn = document.getElementById('btn-search');
@@ -102,6 +106,8 @@
 
 
 
+=======
+>>>>>>> origin/main
 $(document).ready(function(){
 
     $(".delete-btns").click(function(){

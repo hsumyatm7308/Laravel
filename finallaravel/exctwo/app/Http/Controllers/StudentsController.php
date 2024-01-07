@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+<<<<<<< HEAD
 use App\Models\Status;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+=======
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+
+>>>>>>> origin/main
 use Illuminate\Http\Request;
 
 
@@ -17,7 +23,11 @@ class StudentsController extends Controller
     public function index()
     {
         $students = Student::all();
+<<<<<<< HEAD
         return view('students.index', compact('students'));
+=======
+        return view('students.index',compact('students'));
+>>>>>>> origin/main
     }
 
     /**
@@ -33,7 +43,11 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         $this->validate($request, [
+=======
+        $this -> validate($request,[
+>>>>>>> origin/main
             'regnumber' => 'required|unique:students,regnumber',
             'firstname' => 'required',
             'lastname' => 'required',
@@ -41,6 +55,7 @@ class StudentsController extends Controller
         ]);
 
         $user = Auth::user();
+<<<<<<< HEAD
         $user_id = $user->id;
         $student = new Student();
         $student->regnumber = $request['regnumber'];
@@ -53,6 +68,20 @@ class StudentsController extends Controller
         $student->save();
         return redirect(route('students.index'));
 
+=======
+        $user_id = $user -> id;
+        $student = new Student();
+        $student -> regnumber = $request['regnumber'];
+        $student -> firstname = $request['firstname'];
+        $student -> lastname = $request['lastname'];
+        $student -> slug = Str::slug($request['firstname']);
+        $student -> remark = $request['remark'];
+        $student -> user_id = $user_id;
+        
+        $student -> save();
+        return redirect(route('students.index'));
+        
+>>>>>>> origin/main
     }
 
     /**
@@ -61,9 +90,13 @@ class StudentsController extends Controller
     public function show(string $id)
     {
         $student = Student::findOrFail($id);
+<<<<<<< HEAD
         $status = $student->status();
         $enrolls = $student->enrolls();
         return view('students.show', ['student' => $student, "enrolls" => $enrolls, 'status' => $status]);
+=======
+        return view('students.show',['student'=>$student]);
+>>>>>>> origin/main
     }
 
     /**
@@ -72,7 +105,11 @@ class StudentsController extends Controller
     public function edit(string $id)
     {
         $student = Student::findOrFail($id);
+<<<<<<< HEAD
         return view('students.edit')->with('student', $student);
+=======
+        return view('students.edit')->with('student',$student);
+>>>>>>> origin/main
     }
 
     /**
@@ -80,8 +117,13 @@ class StudentsController extends Controller
      */
     public function update(Request $request, string $id)
     {
+<<<<<<< HEAD
         $this->validate($request, [
             'regnumber' => 'required|unique:students,regnumber,' . $id,
+=======
+        $this -> validate($request,[
+            'regnumber' => 'required|unique:students,regnumber,'.$id,
+>>>>>>> origin/main
             'firstname' => 'required',
             'lastname' => 'required',
             'remark' => 'max:1000'
@@ -91,6 +133,7 @@ class StudentsController extends Controller
         $user_id = $user['id'];
 
         $student = Student::findOrFail($id);
+<<<<<<< HEAD
         $student->regnumber = $request['regnumber'];
         $student->firstname = $request['firstname'];
         $student->lastname = $request['lastname'];
@@ -101,6 +144,18 @@ class StudentsController extends Controller
         $student->save();
         return redirect(route('students.index'));
 
+=======
+        $student -> regnumber = $request['regnumber'];
+        $student -> firstname = $request['firstname'];
+        $student -> lastname = $request['lastname'];
+        $student -> slug = Str::slug($request['firstname']);
+        $student -> remark = $request['remark'];
+        $student -> user_id = $user_id;
+        
+        $student -> save();
+        return redirect(route('students.index'));
+        
+>>>>>>> origin/main
     }
 
     /**
@@ -109,7 +164,11 @@ class StudentsController extends Controller
     public function destroy(string $id)
     {
         $student = Student::findOrFail($id);
+<<<<<<< HEAD
         $student->delete();
+=======
+        $student -> delete();
+>>>>>>> origin/main
         return redirect()->back();
     }
 }

@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+<<<<<<< HEAD
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table -> string('regnumber')->unique();
@@ -22,6 +23,19 @@ return new class extends Migration
             $table -> unsignedBigInteger('user_id');
             $table->timestamps();
         });
+=======
+        // Schema::create('students', function (Blueprint $table) {
+        //     $table->id();
+        //     $table -> string('regnumber')->unique();
+        //     $table -> string('firstname');
+        //     $table -> string('lastname');
+        //     $table -> string('slug');
+        //     $table -> text('remark')->nullable();
+        //     $table -> unsignedBigInteger('status_id')->default('1');
+        //     $table -> unsignedBigInteger('user_id');
+        //     $table->timestamps();
+        // });
+>>>>>>> origin/main
     }
 
     /**

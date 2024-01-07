@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+<<<<<<< HEAD
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('image')->nullable();
@@ -29,6 +30,26 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
+=======
+        // Schema::create('posts', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('image')->nullable();
+        //     $table->string('title');
+        //     $table->string('slug');
+        //     $table->longText('content');
+        //     $table->decimal('fee',8,2)->default(0);
+        //     $table->date('startdate')->nullable();
+        //     $table->date('enddate')->nullable();
+        //     $table->time('starttime')->nullable();
+        //     $table->time('endtime')->nullable();
+        //     $table->unsignedBigInteger('type_id');
+        //     $table->unsignedBigInteger('tag_id');
+        //     $table->unsignedBigInteger('attshow')->default('4');
+        //     $table->unsignedBigInteger('status_id')->default('1');
+        //     $table->unsignedBigInteger('user_id');
+        //     $table->timestamps();
+        // });
+>>>>>>> origin/main
     }
 
     /**

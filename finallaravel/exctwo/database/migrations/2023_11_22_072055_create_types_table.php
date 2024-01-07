@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+<<<<<<< HEAD
         Schema::create('types', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
@@ -20,6 +21,17 @@ return new class extends Migration
             
             $table->timestamps();
         });
+=======
+        // Schema::create('types', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('name')->unique();
+        //     $table->string('slug');
+        //     $table->unsignedBigInteger('status_id');
+        //     $table->unsignedBigInteger('user_id');
+            
+        //     $table->timestamps();
+        // });
+>>>>>>> origin/main
     }
 
     /**

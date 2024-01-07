@@ -49,6 +49,7 @@
 
 </div>
 
+<<<<<<< HEAD
 @endsection 
 
 @section('css')
@@ -81,3 +82,6 @@
     });
 </script>
 @endsection
+=======
+@endsection 
+>>>>>>> origin/main

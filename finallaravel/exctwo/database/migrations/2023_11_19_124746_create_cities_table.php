@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+<<<<<<< HEAD
         Schema::create('cities', function (Blueprint $table) {
             $table -> id();
             $table -> string('regnumber');
@@ -21,6 +22,18 @@ return new class extends Migration
             $table -> unsignedBigInteger('user_id');
             $table -> timestamps();
         });
+=======
+        // Schema::create('cities', function (Blueprint $table) {
+        //     $table -> id();
+        //     $table -> string('regnumber');
+        //     $table -> string('city');
+        //     $table -> string('slug');
+        //     $table -> text('remark')->nullable();
+        //     $table -> unsignedBigInteger('status_id')->default('4');
+        //     $table -> unsignedBigInteger('user_id');
+        //     $table -> timestamps();
+        // });
+>>>>>>> origin/main
     }
 
     /**

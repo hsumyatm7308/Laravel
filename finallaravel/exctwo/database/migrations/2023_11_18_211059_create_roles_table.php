@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+<<<<<<< HEAD
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
             $table->string('image')->nullable();
@@ -20,6 +21,17 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
+=======
+        // Schema::create('roles', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('image')->nullable();
+        //     $table->string('name');
+        //     $table->string('slug');
+        //     $table->unsignedBigInteger('status_id')->default('3');
+        //     $table->unsignedBigInteger('user_id');
+        //     $table->timestamps();
+        // });
+>>>>>>> origin/main
     }
 
     /**

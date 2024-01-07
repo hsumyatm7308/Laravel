@@ -21,6 +21,7 @@ class Student extends Model
         'user_id'
     ];
 
+<<<<<<< HEAD
     public function user()
     {
         return $this->belongsTo('App\Models\User');  //send all columns
@@ -42,4 +43,16 @@ class Student extends Model
     }
 
 
+=======
+    public function user(){
+        return $this->belongsTo('App\Models\User');  //send all columns
+    }
+
+    public function status(){
+        // return $this->belongsTo(Status::class);  //send all columns  
+        // return $this -> belongsTo(Status::class)->select('name'); // send single column 
+        return $this->belongsTo(Status::class)->select(['id','name']); // send multi columns
+    }
+
+>>>>>>> origin/main
 }

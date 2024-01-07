@@ -57,7 +57,11 @@
                         </thead>
                         <tbody>
                             <tr>
+<<<<<<< HEAD
                                 <td>{!!$country->remark!!}</td>
+=======
+                                <td>{{$country->remark}}</td>
+>>>>>>> origin/main
                             </tr>
                         </tbody>
                     </table>

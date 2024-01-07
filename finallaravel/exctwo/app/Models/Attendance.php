@@ -15,6 +15,7 @@ class Attendance extends Model
         'classdate',
         'post_id',
         'attcode',
+<<<<<<< HEAD
         'user_d'
     ];
 
@@ -52,10 +53,30 @@ class Attendance extends Model
             return $student;
 
         }
+=======
+        'user_d' 
+    ];
+
+    public function post(){
+        return $this -> belongsTo(Post::class);
+    }
+
+
+    public function user(){
+        return $this -> belongsTo(User::class);
+    }
+
+
+    public function student(){
+        return $this->belongsTo(Student::class,'user_id');
+>>>>>>> origin/main
     }
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
 }

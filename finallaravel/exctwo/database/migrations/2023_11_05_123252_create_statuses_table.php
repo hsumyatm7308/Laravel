@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+<<<<<<< HEAD
         Schema::create('statuses', function (Blueprint $table) {
             $table->id();
             $table -> string('name');
@@ -18,6 +19,15 @@ return new class extends Migration
             $table -> unsignedBigInteger('user_id');
             $table->timestamps();
         });
+=======
+        // Schema::create('statuses', function (Blueprint $table) {
+        //     $table->id();
+        //     $table -> string('name');
+        //     $table -> string('slug');
+        //     $table -> unsignedBigInteger('user_id');
+        //     $table->timestamps();
+        // });
+>>>>>>> origin/main
     }
 
     /**

@@ -66,7 +66,11 @@
             @foreach($attendances as $idx=>$attendance)
             <tr>
                 <td>{{++$idx}}</td>
+<<<<<<< HEAD
                 <td>{{$attendance->student($attendance->user_id)}}</td>   
+=======
+                <td>{{$attendance->student->regnumber}}</td>   
+>>>>>>> origin/main
                 <td>{{$attendance->post['title']}}</td>
                 <td>{{$attendance->attcode}}</td>
                 <td>{{$attendance->user['name']}}</td>
@@ -82,9 +86,12 @@
             </tr> 
             @endforeach
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/main
         </tbody>
         </table>
 
@@ -147,10 +154,13 @@
 {{-- Str = string --}}           
 {{-- Str::limit($attendance -> remark,10) --}}
 
+<<<<<<< HEAD
 @section('css')
   
 @endsection
 
+=======
+>>>>>>> origin/main
 @section('script')
 
 <script type="text/javascript">
