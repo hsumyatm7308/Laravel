@@ -44,6 +44,7 @@ class EnrollsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+
             'image' => 'image|mimes:jpg,jpeg,png|max:10024'
         ]);
 
@@ -94,6 +95,7 @@ class EnrollsController extends Controller
             'name' => ['required', 'max:50', 'unique:enrolls,name,' . $id],
             'image' => ['image', 'mimes:jpg,jpeg,png', 'max:10024'],
             'status_id' => ['required', 'in:3,4']
+
         ]);
 
         $user = Auth::user();
@@ -110,6 +112,7 @@ class EnrollsController extends Controller
         if ($request->hasFile('image')) {
             $path = $enroll->image;
             if (File::exists($path)) {
+
                 File::delete($path);
             }
         }
@@ -128,6 +131,7 @@ class EnrollsController extends Controller
         }
 
         $enroll->save();
+
         return redirect(route('enrolls.index'));
     }
 
@@ -146,6 +150,7 @@ class EnrollsController extends Controller
         }
 
         $enroll->delete();
+
         return redirect()->back();
     }
 }

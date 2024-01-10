@@ -93,12 +93,15 @@
         });
     });
 
+<<<<<<< HEAD
 
  //datatable.com
  let table = new DataTable('#mytable');
     // $('#mytable').DataTable();
 
     
+=======
+>>>>>>> origin/main
 </script>
 
 @endsection 

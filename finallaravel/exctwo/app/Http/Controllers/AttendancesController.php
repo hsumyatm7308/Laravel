@@ -29,6 +29,7 @@ class AttendancesController extends Controller
             'classdate' => 'required|date',
             'post_id' => 'required',
             'attcode' => 'required'
+
         ]);
 
         $user = Auth::user();
@@ -52,6 +53,7 @@ class AttendancesController extends Controller
         $this->validate($request, [
             'post_id' => 'required',
             'attcode' => 'required'
+
         ]);
 
         $user = Auth::user();
@@ -64,6 +66,7 @@ class AttendancesController extends Controller
 
 
         $attendance->save();
+
         return redirect(route('attendances.index'));
     }
 

@@ -30,7 +30,11 @@
                
                 <div class="col-md-12">
                     <div class="d-flex justify-content-end">
+<<<<<<< HEAD
                         <a href="{{route('genders.index')}}" class="btn btn-secondary btn-sm rounded-0">Cancel</a> 
+=======
+                        <a href="route{{'genders.index'}}" class="btn btn-secondary btn-sm rounded-0">Cancel</a> 
+>>>>>>> origin/main
                         <button type="submit" class="btn btn-info btn-sm rounded-0 ms-3">Submit</button>
                     </div>
                 </div>
@@ -40,6 +44,7 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 @endsection 
 
 
@@ -73,3 +78,6 @@
     });
 </script>
 @endsection
+=======
+@endsection 
+>>>>>>> origin/main

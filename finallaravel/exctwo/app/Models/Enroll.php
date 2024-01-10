@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
+
 class Enroll extends Model
 {
     use HasFactory;
@@ -145,6 +146,7 @@ class Enroll extends Model
     {
         return Student::where('user_id', $this->user_id)->get(['students.id'])->first();
     }
+
 
 
 }

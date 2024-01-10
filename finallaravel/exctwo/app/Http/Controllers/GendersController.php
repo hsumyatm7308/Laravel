@@ -10,98 +10,106 @@ use App\Models\Gender;
 
 class GendersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $genders = Gender::all();
-        return view('genders.index', compact('genders'));
-    }
+        /**
+         * Display a listing of the resource.
+         */
+        public function index()
+        {
+                $genders = Gender::all();
+                return view('genders.index', compact('genders'));
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view('genders.create');
-    }
+        }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        $this->validate($request, [
-            'regnumber' => 'required|unique:genders,regnumber',
-            'remark' => 'max:1000'
-        ]);
+        /**
+         * Show the form for creating a new resource.
+         */
+        public function create()
+        {
+                return view('genders.create');
+        }
 
-        $user = Auth::user();
-        $user_id = $user['id'];
+        /**
+         * Store a newly created resource in storage.
+         */
+        public function store(Request $request)
+        {
+                $this->validate($request, [
 
-        $gender = new Gender();
-        $gender->regnumber = $request['regnumber'];
-        $gender->gender = $request['gender'];
-        $gender->slug = Str::slug($request['regnumber']);
-        $gender->remark = $request['remark'];
+                        'regnumber' => 'required|unique:genders,regnumber',
+                        'remark' => 'max:1000'
+                ]);
 
-        $gender->user_id = $user_id;
+                $user = Auth::user();
+                $user_id = $user['id'];
 
-        $gender->save();
-        return redirect(route('genders.index'));
+                $gender = new Gender();
+                $gender->regnumber = $request['regnumber'];
+                $gender->gender = $request['gender'];
+                $gender->slug = Str::slug($request['regnumber']);
+                $gender->remark = $request['remark'];
 
-    }
+                $gender->user_id = $user_id;
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        $gender = Gender::findOrFail($id);
-        return view('genders.show')->with('gender', $gender);
-    }
+                $gender->save();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        $gender = Gender::findOrFail($id);
-        return view('genders.edit', ['gender' => $gender]);
-    }
+                return redirect(route('genders.index'));
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        $this->validate($request, [
-            'regnumber' => 'required|unique:genders,regnumber,' . $id,
-            'remark' => 'max:1000'
-        ]);
+        }
 
-        $user = Auth::user();
-        $user_id = $user['id'];
+        /**
+         * Display the specified resource.
+         */
+        public function show(string $id)
+        {
+                $gender = Gender::findOrFail($id);
+                return view('genders.show')->with('gender', $gender);
 
-        $gender = Gender::findOrFail($id);
-        $gender->regnumber = $request['regnumber'];
-        $gender->gender = $request['gender'];
-        $gender->slug = Str::slug($request['regnumber']);
-        $gender->user_id = $user_id;
+        }
 
-        $gender->save();
-        return redirect(route('genders.index'));
+        /**
+         * Show the form for editing the specified resource.
+         */
+        public function edit(string $id)
+        {
+                $gender = Gender::findOrFail($id);
+                return view('genders.edit', ['gender' => $gender]);
 
-    }
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        $gender = Gender::findOrFail($id);
-        $gender->delete();
-        return redirect()->back();
-    }
+        /**
+         * Update the specified resource in storage.
+         */
+        public function update(Request $request, string $id)
+        {
+                $this->validate($request, [
+                        'regnumber' => 'required|unique:genders,regnumber,' . $id,
+
+                        'remark' => 'max:1000'
+                ]);
+
+                $user = Auth::user();
+                $user_id = $user['id'];
+
+                $gender = Gender::findOrFail($id);
+                $gender->regnumber = $request['regnumber'];
+                $gender->gender = $request['gender'];
+                $gender->slug = Str::slug($request['regnumber']);
+                $gender->user_id = $user_id;
+
+                $gender->save();
+
+                return redirect(route('genders.index'));
+
+        }
+
+        /**
+         * Remove the specified resource from storage.
+         */
+        public function destroy(string $id)
+        {
+                $gender = Gender::findOrFail($id);
+                $gender->delete();
+
+                return redirect()->back();
+        }
 }

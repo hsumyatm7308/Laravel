@@ -52,6 +52,7 @@
 </div>
 <!--End Page Content Area-->
 @endsection
+<<<<<<< HEAD
 
 
 @section('css')
@@ -84,3 +85,5 @@
     });
 </script>
 @endsection
+=======
+>>>>>>> origin/main

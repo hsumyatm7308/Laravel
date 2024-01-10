@@ -24,6 +24,8 @@ class CountriesController extends Controller
         return view('countries.index')->with('countries', $countries);
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      */
@@ -54,6 +56,7 @@ class CountriesController extends Controller
         $country->user_id = $user_id;
 
         $country->save();
+
         return redirect(route('countries.index'));
 
     }
@@ -65,6 +68,7 @@ class CountriesController extends Controller
     {
         $country = Country::findOrFail($id);
         return view('countries.show', ['country' => $country]);
+
     }
 
     /**
@@ -74,6 +78,7 @@ class CountriesController extends Controller
     {
         $country = Country::findOrFail($id);
         return view('countries.edit')->with('country', $country);
+
     }
 
     /**
@@ -83,6 +88,7 @@ class CountriesController extends Controller
     {
         $this->validate($request, [
             'regnumber' => 'required|unique:countries,regnumber,' . $id,
+
             'remark' => 'max:1000'
         ]);
 
@@ -98,6 +104,7 @@ class CountriesController extends Controller
         $country->user_id = $user_id;
 
         $country->save();
+
         return redirect(route('countries.index'));
     }
 
@@ -108,6 +115,7 @@ class CountriesController extends Controller
     {
         $country = Country::findOrFail($id);
         $country->delete();
+
         return redirect()->back();
     }
 }

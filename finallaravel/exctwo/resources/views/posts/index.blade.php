@@ -79,19 +79,25 @@
 
 @endsection
 
+<<<<<<< HEAD
 
 @section('css')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" type="text/css">
  
 @endsection
 
+=======
+>>>>>>> origin/main
 {{-- Str = string --}}
 {{-- Str::limit($post -> remark,10) --}}
 
 @section('script')
 
+<<<<<<< HEAD
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
+=======
+>>>>>>> origin/main
 <script type="text/javascript">
 
     $(document).ready(function(){
@@ -109,10 +115,13 @@
         });
     });
 
+<<<<<<< HEAD
 
     //datatable.com
     // let table = new DataTable('#mytable');
     $('#mytable').DataTable();
+=======
+>>>>>>> origin/main
 </script>
 
 @endsection 

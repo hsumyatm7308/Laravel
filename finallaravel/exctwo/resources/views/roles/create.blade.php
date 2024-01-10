@@ -56,6 +56,7 @@
 
                             <select name="status_id" id="status_id" class="form-control form-control-sm rounded">
                                 
+<<<<<<< HEAD
                                 {{-- @foreach($statuses as $status)
                                 <option value="{{$status->id}}">{{$status->name}}</option>                              
                                 @endforeach --}}
@@ -65,6 +66,12 @@
                                 @foreach($statuses as $id=>$name)
                                 <option value="{{$id}}">{{$name}}</option>                              
                                 @endforeach
+=======
+                                @foreach($statuses as $status)
+                                <option value="{{$status->id}}">{{$status->name}}</option>                              
+                                @endforeach
+
+>>>>>>> origin/main
                             </select>
 
                             @error('status_id')

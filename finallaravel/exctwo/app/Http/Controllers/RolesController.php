@@ -39,6 +39,7 @@ class RolesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+
             'name' => 'required|max:50|unique:roles,name',
             'image' => 'image|mimes:jpg,jpeg,png|max:10024',
             'status_id' => 'required|in:3,4'
@@ -91,6 +92,7 @@ class RolesController extends Controller
             'name' => ['required', 'max:50', 'unique:roles,name,' . $id],
             'image' => ['image', 'mimes:jpg,jpeg,png', 'max:10024'],
             'status_id' => ['required', 'in:3,4']
+
         ]);
 
         $user = Auth::user();
@@ -107,6 +109,7 @@ class RolesController extends Controller
         if ($request->hasFile('image')) {
             $path = $role->image;
             if (File::exists($path)) {
+
                 File::delete($path);
             }
         }
@@ -125,6 +128,7 @@ class RolesController extends Controller
         }
 
         $role->save();
+
         return redirect(route('roles.index'));
     }
 
@@ -143,6 +147,7 @@ class RolesController extends Controller
         }
 
         $role->delete();
+
         return redirect()->back();
     }
 }

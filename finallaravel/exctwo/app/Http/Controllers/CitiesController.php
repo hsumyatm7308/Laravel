@@ -21,6 +21,7 @@ class CitiesController extends Controller
             }
         })->paginate(3);
         return view('cities.index')->with('cities', $cities);
+
     }
 
     /**
@@ -55,6 +56,7 @@ class CitiesController extends Controller
         $city->user_id = $user_id;
 
         $city->save();
+
         return redirect(route('cities.index'));
 
     }
@@ -65,7 +67,9 @@ class CitiesController extends Controller
     public function show(string $id)
     {
         $city = City::findOrFail($id);
+
         return view("cities.show")->with('city', $city);
+
     }
 
     /**
@@ -75,6 +79,7 @@ class CitiesController extends Controller
     {
         $city = City::findOrFail($id);
         return view('cities.edit')->with('city', $city);
+
     }
 
     /**
@@ -84,6 +89,7 @@ class CitiesController extends Controller
     {
         $this->validate($request, [
             'regnumber' => 'required|unique:cities,regnumber,' . $id,
+
             'remark' => 'max:1000'
         ]);
 
@@ -100,6 +106,7 @@ class CitiesController extends Controller
         $city->user_id = $user_id;
 
         $city->save();
+
         return redirect(route('cities.index'));
     }
 
@@ -110,6 +117,7 @@ class CitiesController extends Controller
     {
         $city = City::findOrFail($id);
         $city->delete();
+
         return redirect()->back();
     }
 }

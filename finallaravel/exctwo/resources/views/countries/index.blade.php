@@ -12,6 +12,7 @@
     <hr/>
 
 
+<<<<<<< HEAD
     <div class="col-md-12">
         <form action="" method="">
             <div class="row justify-content-end">
@@ -30,6 +31,8 @@
     </div>
 
 
+=======
+>>>>>>> origin/main
     <table id="mytable" class="mydata table table-warning table-hover border">
     <thead>
         <tr>
@@ -77,8 +80,15 @@
 
     </tbody>
     </table>
+<<<<<<< HEAD
     {{$countries->links('pagination::bootstrap-4')}}
+=======
 
+<<<<<<< HEAD
+>>>>>>> origin/main
+
+=======
+>>>>>>> origin/main
     </div>
 
 </div>

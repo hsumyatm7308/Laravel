@@ -44,8 +44,11 @@
                                     
                                     <li><a href="{{route('attendances.index')}}" class="nav-link text-white sidebarlinks"><i
                                                 class="fas fa-long-arrow-alt-right me-4"></i>Att Form</a></li>
+<<<<<<< HEAD
                                                 <li><a href="{{route('enrolls.index')}}" class="nav-link text-white sidebarlinks"><i
                                                     class="fas fa-long-arrow-alt-right me-4"></i>Enrolls</a></li>
+=======
+>>>>>>> origin/main
 
                                 </ul>
 

@@ -9,7 +9,11 @@
 
         <hr/>
 
+<<<<<<< HEAD
         <table id="mytable" class="mydata table table-info table-hover border">
+=======
+        <table id="mydata" class="mydata table table-info table-hover border">
+>>>>>>> origin/main
 
             <thead>
                 <tr>
@@ -29,8 +33,13 @@
                 <tr>
                     <td>{{++$idx}}</td>
                     <td><a href="{{route('genders.show',$gender->id)}}">{{$gender->regnumber}}</a></td>
+<<<<<<< HEAD
                     <td>{{$gender ->gender}}</td>
                     <td>{{Str::limit($gender ->remark,10)}}</td>
+=======
+                    <td>{{$gender -> gender}}</td>
+                    <td>{{Str::limit($gender -> remark,10)}}</td>
+>>>>>>> origin/main
                     <td>{{$gender -> status_id}}</td>
                     <td>{{$gender -> user_id}}</td>
                     <td>{{$gender -> created_at->format('d-M-Y')}}</td>
@@ -73,12 +82,15 @@ $(document).ready(function(){
     });
 });
 
+<<<<<<< HEAD
 
 
  //datatable.com
     let table = new DataTable('#mytable');
     // $('#mytable').DataTable();
 
+=======
+>>>>>>> origin/main
 </script>
 
 @endsection
