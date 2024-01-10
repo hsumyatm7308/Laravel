@@ -57,7 +57,8 @@
             
             @foreach($tags as $idx=>$tag)
             <tr>
-                <td>{{++$idx}}</td>
+                {{-- <td>{{++$idx}}</td> --}}
+                <td>{{$idx+ $tags->firstItem()}}</td>
                 <td>{{$tag['name']}}</td>
                 <td>{{$tag -> status['name']}}</td>
                 <td>{{$tag->user['name']}}</td>
@@ -80,6 +81,8 @@
 
         </tbody>
         </table>
+
+        {{$tags->links('pagination::bootstrap-4')}}
 
         </div>
 

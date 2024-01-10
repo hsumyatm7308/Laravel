@@ -19,7 +19,7 @@ class RolesController extends Controller
             if ($statusid = request("filterstatus_id")) {
                 $query->where("status_id", $statusid);
             }
-        })->get();
+        })->paginate(3);
         $filterstatuses = Status::whereIn('id', [3, 4])->get()->pluck('name', 'id');
 
         return view('roles.index', compact('roles', 'filterstatuses'));
@@ -146,3 +146,4 @@ class RolesController extends Controller
         return redirect()->back();
     }
 }
+

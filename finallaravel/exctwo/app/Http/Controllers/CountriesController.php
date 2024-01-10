@@ -20,7 +20,7 @@ class CountriesController extends Controller
             if ($getname = request('filtername')) {
                 $query->where('country', 'LIKE', '%' . $getname . '%');
             }
-        })->get();
+        })->paginate(3);
         return view('countries.index')->with('countries', $countries);
     }
 

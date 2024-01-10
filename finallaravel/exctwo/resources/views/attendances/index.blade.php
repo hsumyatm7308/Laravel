@@ -21,11 +21,16 @@
                     <label for="post_id"> Status <span class="text-danger">*</span></label>
 
                     <select name="post_id" id="post_id" class="form-control form-control-sm rounded-0">
+                        <option disabled selected>Choose Option</option>
+
                         @foreach($posts as $post)
                             <option value="{{$post->id}}">{{$post->title}}</option>
                         @endforeach
                         
                     </select>
+                    @error('post_id')
+                    <span class="text-danger">{{$message}}</span>
+                   @enderror
                     </div>
 
                     <div class="col-md-3 form-group">
@@ -116,7 +121,10 @@
                        <div class="col-md-7 form-group">
                         <label for="editpost_id"> Class <span class="text-danger">*</span></label>
 
+                    
+
                         <select name="post_id" id="editpost_id" class="form-control form-control-sm rounded-0">
+                            
                             @foreach($posts as $post)
                                 <option value="{{$post->id}}">{{$post->title}}</option>
                             @endforeach

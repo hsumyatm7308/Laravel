@@ -49,7 +49,9 @@
         
         @foreach($countries as $idx=>$country)
         <tr>
-            <td>{{++$idx}}</td>
+            {{-- <td>{{++$idx}}</td> --}}
+            <td>{{$idx+ $countries->firstItem()}}</td>
+
             <td><a href="{{route('countries.show',$country->id)}}">{{$country->regnumber}}</a></td>
             <td>{{$country->country}} </td>
 
@@ -75,7 +77,7 @@
 
     </tbody>
     </table>
-
+    {{$countries->links('pagination::bootstrap-4')}}
 
     </div>
 

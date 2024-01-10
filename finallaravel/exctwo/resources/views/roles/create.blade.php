@@ -34,11 +34,19 @@
                         <div class="col-md-6 form-group mb-3">
                             <label for="image">Image </label>
                             <input type="file" name="image" id="image" class="form-control form-control-lg rounded-0" placeholder="Enter your image" value="{{old('image')}}"  />
+
+                            @error('image')
+                            <span>{{$message}}</span>
+                            @enderror
                         </div>
     
                        <div class="col-md-6 form-group mb-3">
                            <label for="name"> Name <span class="text-danger">*</span></label>
                            <input type="text" name="name" id="name" class="form-control form-control-lg rounded-0" placeholder="Enter your Role name" value="{{old('firstname')}}" />
+
+                         @error('name')
+                         <span>{{$message}}</span>
+                         @enderror
                        </div>
 
                        <div class="col-md-6 form-group">
@@ -51,12 +59,17 @@
                                 {{-- @foreach($statuses as $status)
                                 <option value="{{$status->id}}">{{$status->name}}</option>                              
                                 @endforeach --}}
+                                <option  selected disabled >Choose options</option>
 
                                  
                                 @foreach($statuses as $id=>$name)
                                 <option value="{{$id}}">{{$name}}</option>                              
                                 @endforeach
                             </select>
+
+                            @error('status_id')
+                            <span>{{$message}}</span>
+                            @enderror
 
                         </div>
                              

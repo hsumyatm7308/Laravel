@@ -19,7 +19,7 @@ class CitiesController extends Controller
                 $query->where('city', 'LIKE', '%' . $getname . '%');
 
             }
-        })->get();
+        })->paginate(3);
         return view('cities.index')->with('cities', $cities);
     }
 
